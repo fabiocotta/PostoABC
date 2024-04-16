@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2024/04/16 20:37:48.147,=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2024/04/16 20:38:55.367,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untPrincipal.dfm=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.dfm</Transaction>
+    <Transaction>2024/04/16 20:38:55.367,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untPrincipal.pas=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2024/04/16 20:39:11.711,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\PostoACB.dproj=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+    <Transaction>2024/04/16 20:39:39.841,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 20:39:55.384,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untDM.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
+    <Transaction>2024/04/16 20:39:55.384,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untDM.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

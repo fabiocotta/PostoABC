@@ -1,0 +1,4 @@
+object DM: TDM
+  Height = 309
+  Width = 393
+end
