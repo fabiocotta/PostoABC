@@ -17,7 +17,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     ParentBackground = False
     TabOrder = 0
     ExplicitWidth = 807
-    object Panel1: TPanel
+    object pnlTitulo: TPanel
       Left = 0
       Top = 0
       Width = 823
@@ -28,7 +28,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       Color = 5395028
       ParentBackground = False
       TabOrder = 0
-      OnMouseDown = Panel1MouseDown
+      OnMouseDown = pnlTituloMouseDown
       ExplicitWidth = 807
       object lblTitulo: TLabel
         AlignWithMargins = True
@@ -46,6 +46,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
+        OnMouseDown = pnlTituloMouseDown
         ExplicitHeight = 30
       end
       object pnltopoIcone: TPanel
@@ -57,7 +58,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
         BevelOuter = bvNone
         Color = clDefault
         TabOrder = 0
-        object Image1: TImage
+        object imgIcone: TImage
           Left = 0
           Top = 0
           Width = 41
@@ -125,13 +126,14 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
             3B0862780582586343B32CEBB8AD5506F47C916189E441C5F8DF2A754A7F0136
             259D40CB9C46860000000049454E44AE426082}
           Stretch = True
+          OnMouseDown = pnlTituloMouseDown
           ExplicitLeft = 8
           ExplicitTop = 16
           ExplicitWidth = 105
           ExplicitHeight = 105
         end
       end
-      object Panel2: TPanel
+      object pnlBtSair: TPanel
         Left = 736
         Top = 0
         Width = 87

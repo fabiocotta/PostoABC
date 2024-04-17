@@ -10,15 +10,15 @@ uses
 type
   TFrmCadBaseBomba = class(TFrmCadBase)
     pnlTopo: TPanel;
-    pnlTitulo: TPanel;
+    Panel1: TPanel;
     pnlFooter: TPanel;
     pnltopoIcone: TPanel;
-    imgIcone: TImage;
-    pnlBtSair: TPanel;
+    Image1: TImage;
+    Panel2: TPanel;
     btnSair: TSpeedButton;
     lblTitulo: TLabel;
     procedure btnSairClick(Sender: TObject);
-    procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
+    procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
   private
     { Private declarations }
@@ -39,7 +39,7 @@ begin
   Self.Close;
 end;
 
-procedure TFrmCadBaseBomba.pnlTituloMouseDown(Sender: TObject;
+procedure TFrmCadBaseBomba.Panel1MouseDown(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 
   const
