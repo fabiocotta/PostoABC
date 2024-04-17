@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBase, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls, Vcl.WinXPanels, Vcl.WinXCtrls,
-  Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls, Vcl.WinXPanels;
 
 type
   TFrmCadBaseBomba = class(TFrmCadBase)
@@ -25,16 +24,9 @@ type
     btnExcluir: TSpeedButton;
     CardPanelLista: TCardPanel;
     pnlFundo: TPanel;
-    CardPesquisa: TCard;
-    CardCadastro: TCard;
-    pnlTitPesquisa: TPanel;
-    lblTitPesquisa: TLabel;
-    SearchBox1: TSearchBox;
-    DBGrid1: TDBGrid;
     procedure btnSairClick(Sender: TObject);
     procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
-    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,12 +44,6 @@ procedure TFrmCadBaseBomba.btnSairClick(Sender: TObject);
 begin
   inherited;
   Self.Close;
-end;
-
-procedure TFrmCadBaseBomba.FormShow(Sender: TObject);
-begin
-  inherited;
-  CardPanelLista.ActiveCard := CardPesquisa;
 end;
 
 procedure TFrmCadBaseBomba.pnlTituloMouseDown(Sender: TObject;

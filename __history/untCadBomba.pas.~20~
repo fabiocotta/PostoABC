@@ -5,20 +5,31 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBase, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.Buttons;
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls, Vcl.WinXPanels;
 
 type
   TFrmCadBaseBomba = class(TFrmCadBase)
     pnlTopo: TPanel;
-    Panel1: TPanel;
+    pnlTitulo: TPanel;
     pnlFooter: TPanel;
     pnltopoIcone: TPanel;
-    Image1: TImage;
-    Panel2: TPanel;
+    imgIcone: TImage;
+    pnlBtSair: TPanel;
     btnSair: TSpeedButton;
+    lblTitulo: TLabel;
+    btnEditar: TSpeedButton;
+    btnNovo: TSpeedButton;
+    btnCancelar: TSpeedButton;
+    btnSalvar: TSpeedButton;
+    btnExcluir: TSpeedButton;
+    CardPanelLista: TCardPanel;
+    pnlFundo: TPanel;
+    CardPesquisa: TCard;
+    CardCadastro: TCard;
     procedure btnSairClick(Sender: TObject);
-    procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+    procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,7 +49,13 @@ begin
   Self.Close;
 end;
 
-procedure TFrmCadBaseBomba.Panel1MouseDown(Sender: TObject;
+procedure TFrmCadBaseBomba.FormShow(Sender: TObject);
+begin
+  inherited;
+  CardPanelLista.ActiveCard := CardPesquisa;
+end;
+
+procedure TFrmCadBaseBomba.pnlTituloMouseDown(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 
   const

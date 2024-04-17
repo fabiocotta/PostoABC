@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBase, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls, Vcl.WinXPanels, Vcl.WinXCtrls,
-  Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls, Vcl.WinXPanels, Vcl.WinXCtrls;
 
 type
   TFrmCadBaseBomba = class(TFrmCadBase)
@@ -30,7 +29,6 @@ type
     pnlTitPesquisa: TPanel;
     lblTitPesquisa: TLabel;
     SearchBox1: TSearchBox;
-    DBGrid1: TDBGrid;
     procedure btnSairClick(Sender: TObject);
     procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);

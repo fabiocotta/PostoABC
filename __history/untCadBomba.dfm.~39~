@@ -150,12 +150,16 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
           Width = 87
           Height = 50
           Cursor = crHandPoint
+          Margins.Left = 0
+          Margins.Top = 0
+          Margins.Right = 0
+          Margins.Bottom = 0
           Align = alTop
           Caption = '[ SAIR ]'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = 6711039
-          Font.Height = -16
+          Font.Color = clWindowText
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -275,20 +279,38 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       ExplicitLeft = 800
     end
   end
-  object CardPanelLista: TCardPanel
-    AlignWithMargins = True
-    Left = 3
-    Top = 44
-    Width = 817
-    Height = 432
+  object pnlFundo: TPanel
+    Left = 0
+    Top = 41
+    Width = 823
+    Height = 438
     Align = alClient
     BevelOuter = bvNone
-    Color = clWhite
+    Color = 5395028
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 184
-    ExplicitTop = 112
-    ExplicitWidth = 300
-    ExplicitHeight = 200
+    ExplicitTop = 72
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object CardPanelLista: TCardPanel
+      AlignWithMargins = True
+      Left = 1
+      Top = 0
+      Width = 821
+      Height = 438
+      Margins.Left = 1
+      Margins.Top = 0
+      Margins.Right = 1
+      Margins.Bottom = 0
+      Align = alClient
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 0
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 352
+      ExplicitHeight = 43
+    end
   end
 end

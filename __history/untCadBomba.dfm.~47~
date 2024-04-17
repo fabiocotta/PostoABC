@@ -5,6 +5,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
   ClientHeight = 528
   ClientWidth = 823
   Position = poMainFormCenter
+  OnShow = FormShow
   TextHeight = 15
   object pnlTopo: TPanel
     Left = 0
@@ -148,20 +149,25 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
           Left = 0
           Top = 0
           Width = 87
-          Height = 50
+          Height = 41
           Cursor = crHandPoint
-          Align = alTop
+          Margins.Left = 0
+          Margins.Top = 0
+          Margins.Right = 0
+          Margins.Bottom = 0
+          Align = alClient
           Caption = '[ SAIR ]'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = 6711039
-          Font.Height = -16
+          Font.Color = clWindowText
+          Font.Height = 16
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
           OnClick = btnSairClick
           ExplicitLeft = 8
           ExplicitWidth = 119
+          ExplicitHeight = 50
         end
       end
     end
@@ -282,7 +288,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     Height = 438
     Align = alClient
     BevelOuter = bvNone
-    Color = 5395028
+    Color = 10066331
     ParentBackground = False
     TabOrder = 2
     ExplicitTop = 72
@@ -290,17 +296,111 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     ExplicitHeight = 41
     object CardPanelLista: TCardPanel
       AlignWithMargins = True
-      Left = 3
-      Top = 3
-      Width = 817
-      Height = 432
+      Left = 1
+      Top = 0
+      Width = 821
+      Height = 438
+      Margins.Left = 1
+      Margins.Top = 0
+      Margins.Right = 1
+      Margins.Bottom = 0
       Align = alClient
+      ActiveCard = CardPesquisa
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 3
+      ExplicitTop = 3
       ExplicitWidth = 352
       ExplicitHeight = 43
+      object CardPesquisa: TCard
+        Left = 0
+        Top = 0
+        Width = 821
+        Height = 438
+        Caption = 'CardPesquisa'
+        CardIndex = 0
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowFrame
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        ExplicitTop = -3
+        object pnlTitPesquisa: TPanel
+          Left = 0
+          Top = 0
+          Width = 821
+          Height = 89
+          Align = alTop
+          BevelOuter = bvNone
+          Color = 15395562
+          ParentBackground = False
+          TabOrder = 0
+          object lblTitPesquisa: TLabel
+            Left = 5
+            Top = 13
+            Width = 76
+            Height = 25
+            Caption = 'Pesquisar'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowFrame
+            Font.Height = -19
+            Font.Name = 'Segoe UI Semilight'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SearchBox1: TSearchBox
+            Left = 5
+            Top = 44
+            Width = 796
+            Height = 33
+            BevelInner = bvNone
+            BevelOuter = bvNone
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowFrame
+            Font.Height = -19
+            Font.Name = 'Segoe UI Semilight'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            TextHint = 'Fa'#231'a aqui sua pesquisa....'
+          end
+        end
+        object DBGrid1: TDBGrid
+          AlignWithMargins = True
+          Left = 5
+          Top = 94
+          Width = 811
+          Height = 339
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 5
+          Align = alClient
+          BorderStyle = bsNone
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowFrame
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+        end
+      end
+      object CardCadastro: TCard
+        Left = 0
+        Top = 0
+        Width = 821
+        Height = 438
+        Caption = 'CardCadastro'
+        CardIndex = 1
+        TabOrder = 1
+        ExplicitWidth = 185
+        ExplicitHeight = 41
+      end
     end
   end
 end

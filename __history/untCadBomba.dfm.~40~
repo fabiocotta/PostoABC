@@ -150,12 +150,16 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
           Width = 87
           Height = 50
           Cursor = crHandPoint
+          Margins.Left = 0
+          Margins.Top = 0
+          Margins.Right = 0
+          Margins.Bottom = 0
           Align = alTop
           Caption = '[ SAIR ]'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = 6711039
-          Font.Height = -16
+          Font.Color = clWindowText
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentFont = False
@@ -282,7 +286,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     Height = 438
     Align = alClient
     BevelOuter = bvNone
-    Color = 5395028
+    Color = 10066331
     ParentBackground = False
     TabOrder = 2
     ExplicitTop = 72
