@@ -1,0 +1,53 @@
+unit untCadBomba;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBase, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TFrmCadBaseBomba = class(TFrmCadBase)
+    pnlTopo: TPanel;
+    pnlTitulo: TPanel;
+    pnlFooter: TPanel;
+    pnltopoIcone: TPanel;
+    imgIcone: TImage;
+    pnlBtSair: TPanel;
+    btnSair: TSpeedButton;
+    lblTitulo: TLabel;
+    procedure btnSairClick(Sender: TObject);
+    procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadBaseBomba: TFrmCadBaseBomba;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmCadBaseBomba.btnSairClick(Sender: TObject);
+begin
+  inherited;
+  Self.Close;
+end;
+
+procedure TFrmCadBaseBomba.pnlTituloMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+
+  const
+   sc_DragMove = $f012;
+begin
+  inherited;
+  ReleaseCapture;
+  Perform(wm_SysCommand, sc_DragMove, 0);
+end;
+
+end.

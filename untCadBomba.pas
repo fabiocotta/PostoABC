@@ -17,6 +17,11 @@ type
     pnlBtSair: TPanel;
     btnSair: TSpeedButton;
     lblTitulo: TLabel;
+    btnEditar: TSpeedButton;
+    btnNovo: TSpeedButton;
+    btnCancelar: TSpeedButton;
+    btnSalvar: TSpeedButton;
+    btnExcluir: TSpeedButton;
     procedure btnSairClick(Sender: TObject);
     procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);

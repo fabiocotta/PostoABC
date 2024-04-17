@@ -178,5 +178,101 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     TabOrder = 1
     ExplicitTop = 440
     ExplicitWidth = 807
+    object btnEditar: TSpeedButton
+      AlignWithMargins = True
+      Left = 454
+      Top = 3
+      Width = 87
+      Height = 43
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'EDITAR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 736
+      ExplicitTop = 0
+      ExplicitHeight = 49
+    end
+    object btnNovo: TSpeedButton
+      AlignWithMargins = True
+      Left = 361
+      Top = 3
+      Width = 87
+      Height = 43
+      Align = alRight
+      GroupIndex = 1
+      Down = True
+      Caption = 'NOVO'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 736
+      ExplicitTop = 0
+      ExplicitHeight = 49
+    end
+    object btnCancelar: TSpeedButton
+      AlignWithMargins = True
+      Left = 547
+      Top = 3
+      Width = 87
+      Height = 43
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'CANCELAR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 760
+    end
+    object btnSalvar: TSpeedButton
+      AlignWithMargins = True
+      Left = 640
+      Top = 3
+      Width = 87
+      Height = 43
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'SALVAR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 784
+      ExplicitTop = 11
+    end
+    object btnExcluir: TSpeedButton
+      AlignWithMargins = True
+      Left = 733
+      Top = 3
+      Width = 87
+      Height = 43
+      Align = alRight
+      GroupIndex = 1
+      Caption = 'EXCLUIR'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 800
+    end
   end
 end
