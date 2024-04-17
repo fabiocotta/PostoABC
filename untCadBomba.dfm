@@ -30,6 +30,24 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       TabOrder = 0
       OnMouseDown = Panel1MouseDown
       ExplicitWidth = 807
+      object lblTitulo: TLabel
+        AlignWithMargins = True
+        Left = 44
+        Top = 3
+        Width = 78
+        Height = 35
+        Align = alLeft
+        Caption = 'lblTitulo'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -21
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        ExplicitHeight = 30
+      end
       object pnltopoIcone: TPanel
         Left = 0
         Top = 0

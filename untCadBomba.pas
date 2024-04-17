@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBase, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.Buttons;
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls;
 
 type
   TFrmCadBaseBomba = class(TFrmCadBase)
@@ -16,6 +16,7 @@ type
     Image1: TImage;
     Panel2: TPanel;
     btnSair: TSpeedButton;
+    lblTitulo: TLabel;
     procedure btnSairClick(Sender: TObject);
     procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
