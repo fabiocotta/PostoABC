@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBase, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls;
+  Vcl.Imaging.pngimage, Vcl.Buttons, Vcl.StdCtrls, Vcl.WinXPanels;
 
 type
   TFrmCadBaseBomba = class(TFrmCadBase)
@@ -22,6 +22,8 @@ type
     btnCancelar: TSpeedButton;
     btnSalvar: TSpeedButton;
     btnExcluir: TSpeedButton;
+    CardPanelLista: TCardPanel;
+    pnlFundo: TPanel;
     procedure btnSairClick(Sender: TObject);
     procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
