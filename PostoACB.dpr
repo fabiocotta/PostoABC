@@ -9,7 +9,20 @@ uses
   untCadTanque in 'untCadTanque.pas' {FrmCadBaseTanque},
   untCadBomba in 'untCadBomba.pas' {FrmCadBaseBomba},
   untCadPerfilVenda in 'untCadPerfilVenda.pas' {FrmCadBasePerfilVenda},
-  untCadMovimento in 'untCadMovimento.pas' {FrmCadBaseMovimento};
+  untCadMovimento in 'untCadMovimento.pas' {FrmCadBaseMovimento},
+  BombaDAO in 'DAO\BombaDAO.pas',
+  TanqueDAO in 'DAO\TanqueDAO.pas',
+  MovimentoDAO in 'DAO\MovimentoDAO.pas',
+  PerfilVendaDAO in 'DAO\PerfilVendaDAO.pas',
+  Movimento in 'DTO\Movimento.pas',
+  Bomba in 'DTO\Bomba.pas',
+  Tanque in 'DTO\Tanque.pas',
+  PerfilVenda in 'DTO\PerfilVenda.pas',
+  MovimentoBO in 'BO\MovimentoBO.pas',
+  PerfilVendaBO in 'BO\PerfilVendaBO.pas',
+  BombaBO in 'BO\BombaBO.pas',
+  TanqueBO in 'BO\TanqueBO.pas',
+  untUtil in 'untUtil.pas';
 
 {$R *.res}
 

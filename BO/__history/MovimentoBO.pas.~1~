@@ -1,0 +1,35 @@
+unit MovimentoBO;
+
+interface
+
+uses
+  Data.SqlExpr, SysUtils, Forms, Windows, Util, MovimentoDAO, Movimento;
+
+type
+  TAbastecimentoBO = class
+  private
+    { private declarations }
+  public
+    procedure Salvar(Abastecimento: TMovimento);
+  end;
+
+implementation
+
+{ TAbastecimentoBO }
+
+procedure TAbastecimentoBO.Salvar(Abastecimento: TMovimento);
+var
+  MovimentoDAO: TMovimentoDAO;
+begin
+  try
+    MovimentoDAO := TMovimentoDAO.Create;
+    MovimentoDAO.Salvar(Movimento);
+    FreeAndNil(MovimentoDAO);
+  except on E: Exception do
+    begin
+      raise Exception.Create(E.Message);
+    end;
+  end;
+end;
+
+end.

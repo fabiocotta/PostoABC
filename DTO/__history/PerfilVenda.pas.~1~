@@ -1,0 +1,47 @@
+unit PerfilVenda;
+
+interface
+
+type
+  TPerfilVenda = class
+  private
+    FValorImposto: Currency;
+    FValorLitroOleoDiesel: Currency;
+    FValorLitroGasolina: Currency;
+    FId: Integer;
+    procedure SetId(const Value: Integer);
+    procedure SetValorImposto(const Value: Currency);
+    procedure SetValorLitroGasolina(const Value: Currency);
+    procedure SetValorLitroOleoDiesel(const Value: Currency);
+  public
+    property Id: Integer read FId write SetId;
+    property ValorLitroGasolina: Currency read FValorLitroGasolina write SetValorLitroGasolina;
+    property ValorLitroOleoDiesel: Currency read FValorLitroOleoDiesel write SetValorLitroOleoDiesel;
+    property ValorImposto: Currency read FValorImposto write SetValorImposto;
+  end;
+
+implementation
+
+{ TConfiguracao }
+
+procedure TPerfilVenda.SetId(const Value: Integer);
+begin
+  FId := Value;
+end;
+
+procedure TPerfilVenda.SetValorImposto(const Value: Currency);
+begin
+  FValorImposto := Value;
+end;
+
+procedure TPerfilVenda.SetValorLitroGasolina(const Value: Currency);
+begin
+  FValorLitroGasolina := Value;
+end;
+
+procedure TPerfilVenda.SetValorLitroOleoDiesel(const Value: Currency);
+begin
+  FValorLitroOleoDiesel := Value;
+end;
+
+end.

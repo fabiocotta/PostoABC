@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2024/04/16 20:37:48.000.147,=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
-    <Transaction>2024/04/16 20:38:55.000.367,C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untPrincipal.pas</Transaction>
     <Transaction>2024/04/16 20:38:55.000.367,C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untPrincipal.dfm</Transaction>
+    <Transaction>2024/04/16 20:38:55.000.367,C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untPrincipal.pas</Transaction>
     <Transaction>2024/04/16 20:39:11.000.711,C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Project4.dproj=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\PostoACB.dproj</Transaction>
     <Transaction>2024/04/16 20:39:39.000.841,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
     <Transaction>2024/04/16 20:39:55.000.384,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untDM.dfm</Transaction>
@@ -12,22 +12,58 @@
     <Transaction>2024/04/16 21:15:24.000.347,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
     <Transaction>2024/04/16 21:15:39.000.004,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.dfm</Transaction>
     <Transaction>2024/04/16 21:15:39.000.004,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas</Transaction>
-    <Transaction>2024/04/16 21:23:03.093,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas=</Transaction>
-    <Transaction>2024/04/16 21:24:16.557,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:24:48.310,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadTanque.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:24:48.310,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadTanque.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
-    <Transaction>2024/04/16 21:27:58.991,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas</Transaction>
-    <Transaction>2024/04/16 21:29:14.798,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas=</Transaction>
-    <Transaction>2024/04/16 21:31:10.910,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:31:38.583,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
-    <Transaction>2024/04/16 21:31:38.583,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:33:19.235,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:34:29.573,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadPerfilVenda.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:34:29.573,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadPerfilVenda.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
-    <Transaction>2024/04/16 21:41:19.875,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:42:26.375,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadMovimento.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
-    <Transaction>2024/04/16 21:42:26.375,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadMovimento.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
-  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <Transaction>2024/04/16 21:23:03.000.093,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas=</Transaction>
+    <Transaction>2024/04/16 21:24:16.000.557,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:24:48.000.310,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadTanque.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
+    <Transaction>2024/04/16 21:24:48.000.310,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadTanque.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:27:58.000.991,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas</Transaction>
+    <Transaction>2024/04/16 21:29:14.000.798,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas=</Transaction>
+    <Transaction>2024/04/16 21:31:10.000.910,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:31:38.000.583,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:31:38.000.583,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadBomba.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
+    <Transaction>2024/04/16 21:33:19.000.235,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:34:29.000.573,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadPerfilVenda.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
+    <Transaction>2024/04/16 21:34:29.000.573,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadPerfilVenda.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:41:19.000.875,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:42:26.000.375,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadMovimento.dfm=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.dfm</Transaction>
+    <Transaction>2024/04/16 21:42:26.000.375,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untCadMovimento.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 21:52:27.000.726,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DAO\BombaDAO.pas</Transaction>
+    <Transaction>2024/04/16 21:53:22.000.919,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DAO\TanqueDAO.pas</Transaction>
+    <Transaction>2024/04/16 21:53:38.000.358,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DAO\MovimentoDAO.pas</Transaction>
+    <Transaction>2024/04/16 21:53:43.000.647,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DAO\PerfilVendaDAO.pas</Transaction>
+    <Transaction>2024/04/16 21:58:48.000.317,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 22:00:23.000.008,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DTO\Movimento.pas</Transaction>
+    <Transaction>2024/04/16 22:00:51.000.898,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 22:01:43.000.598,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DTO\Bomba.pas</Transaction>
+    <Transaction>2024/04/16 22:01:52.000.117,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 22:02:36.000.471,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DTO\Tanque.pas</Transaction>
+    <Transaction>2024/04/16 22:03:01.000.562,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 22:04:00.000.288,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\DTO\PerfilVenda.pas</Transaction>
+    <Transaction>2024/04/16 22:07:33.000.054,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 22:09:47.000.314,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\BO\MovimentoBO.pas</Transaction>
+    <Transaction>2024/04/16 22:10:58.000.737,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 22:13:37.000.837,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\BO\PerfilVendaBO.pas</Transaction>
+    <Transaction>2024/04/16 22:14:22.000.240,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\BO\BombaBO.pas</Transaction>
+    <Transaction>2024/04/16 22:14:30.000.920,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\BO\TanqueBO.pas</Transaction>
+    <Transaction>2024/04/16 22:16:24.071,=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+    <Transaction>2024/04/16 22:16:46.094,C:\Users\f_cot\Documents\GitHub\dev\PostoACB\untUtil.pas=C:\Users\f_cot\Documents\GitHub\dev\PostoACB\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="BO"/>
+    <File Path="BO\BombaBO.pas"/>
+    <File Path="BO\MovimentoBO.pas"/>
+    <File Path="BO\PerfilVendaBO.pas"/>
+    <File Path="BO\TanqueBO.pas"/>
+    <File Path="DAO"/>
+    <File Path="DAO\BombaDAO.pas"/>
+    <File Path="DAO\MovimentoDAO.pas"/>
+    <File Path="DAO\PerfilVendaDAO.pas"/>
+    <File Path="DAO\TanqueDAO.pas"/>
+    <File Path="DTO"/>
+    <File Path="DTO\Bomba.pas"/>
+    <File Path="DTO\Movimento.pas"/>
+    <File Path="DTO\PerfilVenda.pas"/>
+    <File Path="DTO\Tanque.pas"/>
     <File Path="untCadBase.pas"/>
     <File Path="untCadBase.dfm"/>
     <File Path="untDM.pas"/>
@@ -42,5 +78,6 @@
     <File Path="untCadPerfilVenda.dfm"/>
     <File Path="untCadMovimento.pas"/>
     <File Path="untCadMovimento.dfm"/>
+    <File Path="untUtil.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

@@ -1,0 +1,36 @@
+program PostoACB;
+
+
+uses
+  Vcl.Forms,
+  untPrincipal in 'untPrincipal.pas' {frmPrincipal},
+  untDM in 'untDM.pas' {DM: TDataModule},
+  untCadBase in 'untCadBase.pas' {FrmCadBase},
+  untCadTanque in 'untCadTanque.pas' {FrmCadBaseTanque},
+  untCadBomba in 'untCadBomba.pas' {FrmCadBaseBomba},
+  untCadPerfilVenda in 'untCadPerfilVenda.pas' {FrmCadBasePerfilVenda},
+  untCadMovimento in 'untCadMovimento.pas' {FrmCadBaseMovimento},
+  BombaDAO in 'DAO\BombaDAO.pas',
+  TanqueDAO in 'DAO\TanqueDAO.pas',
+  MovimentoDAO in 'DAO\MovimentoDAO.pas',
+  PerfilVendaDAO in 'DAO\PerfilVendaDAO.pas',
+  Movimento in 'DTO\Movimento.pas',
+  Bomba in 'DTO\Bomba.pas',
+  Tanque in 'DTO\Tanque.pas',
+  PerfilVenda in 'DTO\PerfilVenda.pas',
+  MovimentoBO in 'BO\MovimentoBO.pas',
+  PerfilVendaBO in 'BO\PerfilVendaBO.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TFrmCadBase, FrmCadBase);
+  Application.CreateForm(TFrmCadBaseTanque, FrmCadBaseTanque);
+  Application.CreateForm(TFrmCadBaseBomba, FrmCadBaseBomba);
+  Application.CreateForm(TFrmCadBasePerfilVenda, FrmCadBasePerfilVenda);
+  Application.CreateForm(TFrmCadBaseMovimento, FrmCadBaseMovimento);
+  Application.Run;
+end.

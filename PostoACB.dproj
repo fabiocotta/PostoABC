@@ -130,6 +130,19 @@
             <Form>FrmCadBaseMovimento</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="DAO\BombaDAO.pas"/>
+        <DCCReference Include="DAO\TanqueDAO.pas"/>
+        <DCCReference Include="DAO\MovimentoDAO.pas"/>
+        <DCCReference Include="DAO\PerfilVendaDAO.pas"/>
+        <DCCReference Include="DTO\Movimento.pas"/>
+        <DCCReference Include="DTO\Bomba.pas"/>
+        <DCCReference Include="DTO\Tanque.pas"/>
+        <DCCReference Include="DTO\PerfilVenda.pas"/>
+        <DCCReference Include="BO\MovimentoBO.pas"/>
+        <DCCReference Include="BO\PerfilVendaBO.pas"/>
+        <DCCReference Include="BO\BombaBO.pas"/>
+        <DCCReference Include="BO\TanqueBO.pas"/>
+        <DCCReference Include="untUtil.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
