@@ -1,4 +1,0 @@
-inherited FrmCadBaseBomba: TFrmCadBaseBomba
-  Caption = 'FrmCadBaseBomba'
-  TextHeight = 15
-end

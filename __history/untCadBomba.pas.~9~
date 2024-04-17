@@ -1,0 +1,32 @@
+unit untCadBomba;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBase, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage, Vcl.Buttons;
+
+type
+  TFrmCadBaseBomba = class(TFrmCadBase)
+    pnlTopo: TPanel;
+    Panel1: TPanel;
+    pnlFooter: TPanel;
+    pnltopoIcone: TPanel;
+    Image1: TImage;
+    Panel2: TPanel;
+    btnSair: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadBaseBomba: TFrmCadBaseBomba;
+
+implementation
+
+{$R *.dfm}
+
+end.

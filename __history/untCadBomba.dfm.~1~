@@ -1,4 +1,0 @@
-inherited FrmCadBase1: TFrmCadBase1
-  Caption = 'FrmCadBase1'
-  TextHeight = 15
-end
