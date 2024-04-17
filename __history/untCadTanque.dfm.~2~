@@ -1,0 +1,5 @@
+inherited FrmCadBaseTanque: TFrmCadBaseTanque
+  Caption = 'FrmCadBaseTanque'
+  Position = poMainFormCenter
+  TextHeight = 15
+end

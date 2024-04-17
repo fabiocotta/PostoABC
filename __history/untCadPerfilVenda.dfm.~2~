@@ -1,0 +1,4 @@
+inherited FrmCadBasePerfilVenda: TFrmCadBasePerfilVenda
+  Caption = 'Cadastro de Perfil de Venda'
+  TextHeight = 15
+end

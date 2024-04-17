@@ -1,0 +1,31 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'SCA - Sistema de Controle de Abastecimento'
+  ClientHeight = 441
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = MainMenu1
+  TextHeight = 15
+  object MainMenu1: TMainMenu
+    Left = 160
+    Top = 88
+    object CadastroTanque1: TMenuItem
+      Caption = 'Cadastrar Bomba'
+    end
+    object CadastrarBomba1: TMenuItem
+      Caption = 'Cadastrar Tanque'
+    end
+    object Movimentao1: TMenuItem
+      Caption = 'Movimenta'#231#227'o'
+    end
+    object PerfilVenda1: TMenuItem
+      Caption = 'Perfil Venda'
+    end
+  end
+end

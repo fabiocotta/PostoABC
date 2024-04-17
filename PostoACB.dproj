@@ -110,6 +110,26 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="untCadBase.pas">
+            <Form>FrmCadBase</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untCadTanque.pas">
+            <Form>FrmCadBaseTanque</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untCadBomba.pas">
+            <Form>FrmCadBaseBomba</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untCadPerfilVenda.pas">
+            <Form>FrmCadBasePerfilVenda</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untCadMovimento.pas">
+            <Form>FrmCadBaseMovimento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

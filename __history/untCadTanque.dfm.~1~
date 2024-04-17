@@ -1,0 +1,4 @@
+inherited FrmCadBaseTanque: TFrmCadBaseTanque
+  Caption = 'FrmCadBaseTanque'
+  TextHeight = 15
+end

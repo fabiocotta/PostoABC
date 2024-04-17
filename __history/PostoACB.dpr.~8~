@@ -1,0 +1,17 @@
+program PostoACB;
+
+uses
+  Vcl.Forms,
+  untPrincipal in 'untPrincipal.pas' {frmPrincipal},
+  untDM in 'untDM.pas' {DM: TDataModule},
+  untCadBase in 'untCadBase.pas' {FrmCadBase};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TFrmCadBase, FrmCadBase);
+    Application.Run;
+end.

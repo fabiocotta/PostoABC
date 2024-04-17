@@ -1,0 +1,6 @@
+inherited FrmCadBaseBomba: TFrmCadBaseBomba
+  BorderIcons = [biSystemMenu]
+  Caption = 'FrmCadBaseBomba'
+  Position = poMainFormCenter
+  TextHeight = 15
+end
