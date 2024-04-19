@@ -2656,10 +2656,8 @@ object FrmPrincipal: TFrmPrincipal
           0801000000208710000000007208010000002087100000000072080100000020
           8710000000007208010000002087100000000072E8FF0314EBCF4A26CBEF8F00
           00000049454E44AE426082}
-        ExplicitLeft = 312
-        ExplicitTop = 131
-        ExplicitWidth = 265
-        ExplicitHeight = 257
+        ExplicitLeft = -48
+        ExplicitTop = -28
       end
     end
   end

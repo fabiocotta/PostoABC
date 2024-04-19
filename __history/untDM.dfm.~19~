@@ -1,0 +1,14 @@
+object DM: TDM
+  Height = 309
+  Width = 393
+  object Conn: TFDConnection
+    ConnectionName = 'Conn'
+    Params.Strings = (
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'DriverID=FB')
+    LoginPrompt = False
+    Left = 56
+    Top = 24
+  end
+end

@@ -31,6 +31,7 @@ type
     lblTitPesquisa: TLabel;
     SearchBox1: TSearchBox;
     DBGrid1: TDBGrid;
+    dsDados: TDataSource;
     procedure btnSairClick(Sender: TObject);
     procedure pnlTituloMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);

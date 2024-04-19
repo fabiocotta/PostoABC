@@ -381,6 +381,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
           Margins.Bottom = 5
           Align = alClient
           BorderStyle = bsNone
+          DataSource = dsDados
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
           TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
@@ -402,5 +403,9 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
         ExplicitHeight = 41
       end
     end
+  end
+  object dsDados: TDataSource
+    Left = 737
+    Top = 177
   end
 end

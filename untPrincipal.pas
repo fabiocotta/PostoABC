@@ -3,10 +3,25 @@ unit UntPrincipal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+ { Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
   Vcl.Imaging.pngimage, System.Actions, Vcl.ActnList, System.ImageList,
-  Vcl.ImgList;
+  Vcl.ImgList, Data.DB, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids;   }
+
+
+
+   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.Imaging.pngimage, Vcl.StdCtrls;
+
 
 type
   TFrmPrincipal = class(TForm)
@@ -66,7 +81,8 @@ implementation
 
 {$R *.dfm}
 
-uses UntCadBomba, untCadTanque, untCadPerfilVenda, untCadMovimento;
+uses UntCadBomba, untCadTanque, untCadPerfilVenda, untCadMovimento, View.bomba,
+  untDM;
 
 procedure TFrmPrincipal.btnTanqueClick(Sender: TObject);
 begin
@@ -95,12 +111,12 @@ end;
 procedure TFrmPrincipal.btnBombaClick(Sender: TObject);
 begin
     GET_LineMenu(Sender);
-    FrmCadBaseBomba := TFrmCadBaseBomba.Create(Self);
+    ViewBomba := TViewBomba.Create(Self);
     try
-      FrmCadBaseBomba.showmodal;
+      ViewBomba.ShowModal;
 
     finally
-      FreeAndNil(FrmCadBaseBomba);
+      FreeAndNil(ViewBomba);
     end;
 end;
 

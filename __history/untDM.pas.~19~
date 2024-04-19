@@ -1,0 +1,62 @@
+unit untDM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet;
+
+type
+  TDM = class(TDataModule)
+    conn: TFDConnection;
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+      function ListarBomba(sqlstring:string):string;
+
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+
+
+
+function TDM.ListarBomba(sqlstring:string):string;
+var
+qry : TFDQuery;
+
+begin
+
+  try
+
+    // instanciar o objeto
+    sqlstring := 'SELECT * FROM ABC_BOMBA';
+
+    qry := TFDQuery.Create(nil);
+    //manda ele conectar com o banco
+       qry.Connection := DM.conn;
+    qry.SQL.Add(sqlstring);
+    qry.Open;
+
+  finally
+    // limpa o objeto da memoria
+    qry.DisposeOf;
+
+  end;
+end;
+
+
+end.

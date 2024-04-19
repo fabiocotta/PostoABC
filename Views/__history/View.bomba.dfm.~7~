@@ -1,0 +1,51 @@
+inherited ViewBomba: TViewBomba
+  Caption = 'ViewBomba'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Width = 69
+        Height = 35
+        Caption = 'Bomba'
+        ExplicitWidth = 69
+      end
+    end
+  end
+  inherited pnlFundo: TPanel
+    inherited CardPanelLista: TCardPanel
+      inherited CardPesquisa: TCard
+        inherited DBGrid1: TDBGrid
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'ID_BOMBA'
+              Title.Caption = 'C'#243'digo da Bomba'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESC_BOMBA'
+              Title.Caption = 'Descri'#231#227'o da Bomba'
+              Width = 595
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ID_TANQUE'
+              Title.Caption = 'C'#243'digo do Tanque'
+              Width = 64
+              Visible = True
+            end>
+        end
+      end
+      inherited CardCadastro: TCard
+        ExplicitWidth = 821
+        ExplicitHeight = 438
+      end
+    end
+  end
+  inherited dsDados: TDataSource
+    AutoEdit = False
+    DataSet = DM.QryBomba
+  end
+end
