@@ -1,7 +1,7 @@
 object DM: TDM
   Height = 309
   Width = 393
-  object FDConnection1: TFDConnection
+  object conn: TFDConnection
     Params.Strings = (
       'User_Name=sysdba'
       'Password=masterkey'
@@ -11,27 +11,27 @@ object DM: TDM
       'DriverID=FB')
     Connected = True
     LoginPrompt = False
-    Left = 94
-    Top = 137
+    Left = 18
+    Top = 34
   end
-  object FDQuery1: TFDQuery
-    Connection = FDConnection1
+  object qryBombas: TFDQuery
+    Connection = conn
     SQL.Strings = (
       'select * from abc_Bomba')
-    Left = 193
-    Top = 145
-    object FDQuery1ID_BOMBA: TIntegerField
+    Left = 314
+    Top = 23
+    object qryBombasID_BOMBA: TIntegerField
       FieldName = 'ID_BOMBA'
       Origin = 'ID_BOMBA'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object FDQuery1DESC_BOMBA: TWideStringField
+    object qryBombasDESC_BOMBA: TWideStringField
       FieldName = 'DESC_BOMBA'
       Origin = 'DESC_BOMBA'
       Size = 50
     end
-    object FDQuery1ID_TANQUE: TIntegerField
+    object qryBombasID_TANQUE: TIntegerField
       FieldName = 'ID_TANQUE'
       Origin = 'ID_TANQUE'
       Required = True

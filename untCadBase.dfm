@@ -3,8 +3,8 @@ object FrmCadBase: TFrmCadBase
   Top = 0
   BorderStyle = bsSingle
   Caption = 'Formul'#225'rio de Cadastro - Base'
-  ClientHeight = 489
-  ClientWidth = 807
+  ClientHeight = 497
+  ClientWidth = 809
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

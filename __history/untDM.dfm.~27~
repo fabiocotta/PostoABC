@@ -1,0 +1,41 @@
+object DM: TDM
+  Height = 386
+  Width = 491
+  PixelsPerInch = 120
+  object conn: TFDConnection
+    Params.Strings = (
+      'User_Name=sysdba'
+      'Password=masterkey'
+      
+        'Database=C:\Users\f_cot\Documents\GitHub\dev\PostoABC\db\POSTOAB' +
+        'C.FDB'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 22
+    Top = 43
+  end
+  object qryBombas: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from abc_Bomba')
+    Left = 393
+    Top = 29
+    object qryBombasID_BOMBA: TIntegerField
+      FieldName = 'ID_BOMBA'
+      Origin = 'ID_BOMBA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryBombasDESC_BOMBA: TWideStringField
+      FieldName = 'DESC_BOMBA'
+      Origin = 'DESC_BOMBA'
+      Size = 50
+    end
+    object qryBombasID_TANQUE: TIntegerField
+      FieldName = 'ID_TANQUE'
+      Origin = 'ID_TANQUE'
+      Required = True
+    end
+  end
+end

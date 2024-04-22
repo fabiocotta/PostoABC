@@ -6,6 +6,8 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
   ClientWidth = 823
   Position = poMainFormCenter
   OnShow = FormShow
+  ExplicitWidth = 823
+  ExplicitHeight = 528
   TextHeight = 15
   object pnlTopo: TPanel
     Left = 0
@@ -17,7 +19,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     Color = 5395028
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 807
     object pnlTitulo: TPanel
       Left = 0
       Top = 0
@@ -30,7 +31,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       ParentBackground = False
       TabOrder = 0
       OnMouseDown = pnlTituloMouseDown
-      ExplicitWidth = 807
       object lblTitulo: TLabel
         AlignWithMargins = True
         Left = 44
@@ -144,7 +144,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
         Color = 10198015
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 720
         object btnSair: TSpeedButton
           Left = 0
           Top = 0
@@ -182,8 +181,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     Color = 10066331
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 440
-    ExplicitWidth = 807
     object btnEditar: TSpeedButton
       AlignWithMargins = True
       Left = 454
@@ -191,7 +188,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       Width = 87
       Height = 43
       Align = alRight
-      GroupIndex = 1
+      Down = True
       Caption = 'EDITAR'
       Flat = True
       Font.Charset = ANSI_CHARSET
@@ -212,7 +209,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       Height = 43
       Align = alRight
       GroupIndex = 1
-      Down = True
       Caption = 'NOVO'
       Flat = True
       Font.Charset = ANSI_CHARSET
@@ -227,7 +223,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     end
     object btnCancelar: TSpeedButton
       AlignWithMargins = True
-      Left = 547
+      Left = 733
       Top = 3
       Width = 87
       Height = 43
@@ -241,7 +237,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 760
+      ExplicitLeft = 659
     end
     object btnSalvar: TSpeedButton
       AlignWithMargins = True
@@ -264,7 +260,7 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     end
     object btnExcluir: TSpeedButton
       AlignWithMargins = True
-      Left = 733
+      Left = 547
       Top = 3
       Width = 87
       Height = 43
@@ -278,7 +274,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       Font.Name = 'Segoe UI Semibold'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 800
     end
   end
   object pnlFundo: TPanel
@@ -291,9 +286,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
     Color = 10066331
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 72
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object CardPanelLista: TCardPanel
       AlignWithMargins = True
       Left = 1
@@ -310,10 +302,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 3
-      ExplicitTop = 3
-      ExplicitWidth = 352
-      ExplicitHeight = 43
       object CardPesquisa: TCard
         Left = 0
         Top = 0
@@ -328,7 +316,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitTop = -3
         object pnlTitPesquisa: TPanel
           Left = 0
           Top = 0
@@ -399,8 +386,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
         Caption = 'CardCadastro'
         CardIndex = 1
         TabOrder = 1
-        ExplicitWidth = 185
-        ExplicitHeight = 41
       end
     end
   end

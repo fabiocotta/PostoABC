@@ -12,11 +12,11 @@ uses
 
 type
   TDM = class(TDataModule)
-    FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
-    FDQuery1ID_BOMBA: TIntegerField;
-    FDQuery1DESC_BOMBA: TWideStringField;
-    FDQuery1ID_TANQUE: TIntegerField;
+    conn: TFDConnection;
+    qryBombas: TFDQuery;
+    qryBombasID_BOMBA: TIntegerField;
+    qryBombasDESC_BOMBA: TWideStringField;
+    qryBombasID_TANQUE: TIntegerField;
   private
 
     { Private declarations }
