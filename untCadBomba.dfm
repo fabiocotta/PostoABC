@@ -188,7 +188,6 @@ inherited FrmCadBaseBomba: TFrmCadBaseBomba
       Width = 87
       Height = 43
       Align = alRight
-      Down = True
       Caption = 'EDITAR'
       Flat = True
       Font.Charset = ANSI_CHARSET

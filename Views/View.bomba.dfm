@@ -52,6 +52,7 @@ inherited ViewBomba: TViewBomba
     inherited btnExcluir: TSpeedButton
       Left = 629
       GroupIndex = 0
+      OnClick = btnExcluirClick
       ExplicitLeft = 618
       ExplicitTop = 6
     end
@@ -72,6 +73,7 @@ inherited ViewBomba: TViewBomba
         end
         inherited DBGrid1: TDBGrid
           Width = 893
+          OnDblClick = btnEditarClick
           Columns = <
             item
               Expanded = False
@@ -162,6 +164,7 @@ inherited ViewBomba: TViewBomba
           Top = 128
           Width = 624
           Height = 23
+          CharCase = ecUpperCase
           DataField = 'DESC_BOMBA'
           DataSource = dsDados
           TabOrder = 2

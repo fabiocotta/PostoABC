@@ -6,7 +6,6 @@ uses
   untPrincipal in 'untPrincipal.pas' {frmPrincipal},
   untDM in 'untDM.pas' {DM: TDataModule},
   untCadBase in 'untCadBase.pas' {FrmCadBase},
-  untCadTanque in 'untCadTanque.pas' {FrmCadBaseTanque},
   untCadBomba in 'untCadBomba.pas' {FrmCadBaseBomba},
   untCadPerfilVenda in 'untCadPerfilVenda.pas' {FrmCadBasePerfilVenda},
   untCadMovimento in 'untCadMovimento.pas' {FrmCadBaseMovimento},

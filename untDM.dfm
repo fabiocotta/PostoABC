@@ -21,6 +21,7 @@ object DM: TDM
     Left = 314
     Top = 23
     object qryBombasID_BOMBA: TIntegerField
+      AutoGenerateValue = arAutoInc
       FieldName = 'ID_BOMBA'
       Origin = 'ID_BOMBA'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]

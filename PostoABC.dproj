@@ -114,10 +114,6 @@
             <Form>FrmCadBase</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="untCadTanque.pas">
-            <Form>FrmCadBaseTanque</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="untCadBomba.pas">
             <Form>FrmCadBaseBomba</Form>
             <FormType>dfm</FormType>
