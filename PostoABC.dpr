@@ -7,8 +7,6 @@ uses
   untDM in 'untDM.pas' {DM: TDataModule},
   untCadBase in 'untCadBase.pas' {FrmCadBase},
   untCadBomba in 'untCadBomba.pas' {FrmCadBaseBomba},
-  untCadPerfilVenda in 'untCadPerfilVenda.pas' {FrmCadBasePerfilVenda},
-  untCadMovimento in 'untCadMovimento.pas' {FrmCadBaseMovimento},
   BombaDAO in 'DAO\BombaDAO.pas',
   TanqueDAO in 'DAO\TanqueDAO.pas',
   MovimentoDAO in 'DAO\MovimentoDAO.pas',
@@ -22,7 +20,8 @@ uses
   BombaBO in 'BO\BombaBO.pas',
   TanqueBO in 'BO\TanqueBO.pas',
   untUtil in 'untUtil.pas',
-  View.bomba in 'Views\View.bomba.pas' {ViewBomba};
+  View.bomba in 'Views\View.bomba.pas' {ViewBomba},
+  View.tanque in 'Views\View.tanque.pas' {ViewTanque};
 
 {$R *.res}
 
@@ -31,5 +30,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TViewTanque, ViewTanque);
   Application.Run;
 end.

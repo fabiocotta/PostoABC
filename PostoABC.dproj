@@ -118,14 +118,6 @@
             <Form>FrmCadBaseBomba</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="untCadPerfilVenda.pas">
-            <Form>FrmCadBasePerfilVenda</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="untCadMovimento.pas">
-            <Form>FrmCadBaseMovimento</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="DAO\BombaDAO.pas"/>
         <DCCReference Include="DAO\TanqueDAO.pas"/>
         <DCCReference Include="DAO\MovimentoDAO.pas"/>
@@ -141,6 +133,10 @@
         <DCCReference Include="untUtil.pas"/>
         <DCCReference Include="Views\View.bomba.pas">
             <Form>ViewBomba</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Views\View.tanque.pas">
+            <Form>ViewTanque</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

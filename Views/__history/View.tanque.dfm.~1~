@@ -1,0 +1,11 @@
+inherited FrmCadBaseBomba1: TFrmCadBaseBomba1
+  Caption = 'FrmCadBaseBomba1'
+  TextHeight = 15
+  inherited pnlTopo: TPanel
+    inherited pnlTitulo: TPanel
+      inherited lblTitulo: TLabel
+        Height = 35
+      end
+    end
+  end
+end

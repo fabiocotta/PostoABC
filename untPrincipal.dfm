@@ -1276,7 +1276,6 @@ object FrmPrincipal: TFrmPrincipal
           000000000000}
         Margin = 5
         ParentFont = False
-        OnClick = btnMovimentoClick
         ExplicitTop = 251
       end
       object btnPerfilVenda: TSpeedButton
@@ -1590,7 +1589,6 @@ object FrmPrincipal: TFrmPrincipal
           000000000000}
         Margin = 5
         ParentFont = False
-        OnClick = btnPerfilVendaClick
         ExplicitLeft = 6
         ExplicitTop = 211
       end

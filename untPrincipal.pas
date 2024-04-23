@@ -64,8 +64,6 @@ type
     procedure btnSairClick(Sender: TObject);
     procedure btnBombaClick(Sender: TObject);
     procedure btnTanqueClick(Sender: TObject);
-    procedure btnMovimentoClick(Sender: TObject);
-    procedure btnPerfilVendaClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
@@ -81,30 +79,18 @@ implementation
 
 {$R *.dfm}
 
-uses UntCadBomba, untCadTanque, untCadPerfilVenda, untCadMovimento, View.bomba,
+uses UntCadBomba, View.tanque, View.bomba,
   untDM;
 
 procedure TFrmPrincipal.btnTanqueClick(Sender: TObject);
 begin
     GET_LineMenu(Sender);
-    FrmCadBaseTanque := TFrmCadBaseTanque.Create(Self);
+    ViewTanque := TViewTanque.Create(Self);
     try
-      FrmCadBaseTanque.showmodal;
+      ViewTanque.showmodal;
 
     finally
-      FreeAndNil(FrmCadBaseTanque);
-    end;
-end;
-
-procedure TFrmPrincipal.btnMovimentoClick(Sender: TObject);
-begin
-  GET_LineMenu(Sender);
-  FrmCadBaseMovimento := TFrmCadBaseMovimento.Create(Self);
-    try
-      FrmCadBaseMovimento.showmodal;
-
-    finally
-      FreeAndNil(FrmCadBaseMovimento);
+      FreeAndNil(ViewTanque);
     end;
 end;
 
@@ -117,18 +103,6 @@ begin
 
     finally
       FreeAndNil(ViewBomba);
-    end;
-end;
-
-procedure TFrmPrincipal.btnPerfilVendaClick(Sender: TObject);
-begin
-  GET_LineMenu(Sender);
-  FrmCadBasePerfilVenda := TFrmCadBasePerfilVenda.Create(Self);
-    try
-      FrmCadBasePerfilVenda.showmodal;
-
-    finally
-      FreeAndNil(FrmCadBasePerfilVenda);
     end;
 end;
 
