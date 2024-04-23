@@ -26,26 +26,34 @@ inherited ViewBomba: TViewBomba
     ExplicitWidth = 900
     inherited btnEditar: TSpeedButton
       Left = 531
+      Caption = 'ALTERAR'
       OnClick = btnEditarClick
       ExplicitLeft = 531
     end
     inherited btnNovo: TSpeedButton
       Left = 438
+      GroupIndex = 0
       OnClick = btnNovoClick
       ExplicitLeft = 438
     end
     inherited btnCancelar: TSpeedButton
-      Left = 624
-      ExplicitLeft = 624
+      Left = 810
+      GroupIndex = 0
+      OnClick = btnCancelarClick
+      ExplicitLeft = 717
     end
     inherited btnSalvar: TSpeedButton
       Left = 717
+      GroupIndex = 0
       OnClick = btnSalvarClick
-      ExplicitLeft = 717
+      ExplicitLeft = 581
+      ExplicitTop = 6
     end
     inherited btnExcluir: TSpeedButton
-      Left = 810
-      ExplicitLeft = 810
+      Left = 624
+      GroupIndex = 0
+      ExplicitLeft = 618
+      ExplicitTop = 6
     end
   end
   inherited pnlFundo: TPanel
@@ -97,15 +105,15 @@ inherited ViewBomba: TViewBomba
           Width = 63
           Height = 15
           Caption = 'C'#243'd Bomba'
-          FocusControl = DBEdit1
+          FocusControl = edtCodBomba
         end
         object Label3: TLabel
           Left = 185
           Top = 112
           Width = 108
           Height = 15
-          Caption = 'Descri'#231#224'o da Bomba'
-          FocusControl = DBEdit2
+          Caption = 'Descri'#231#227'o da Bomba'
+          FocusControl = edtDescBomba
         end
         object Label4: TLabel
           Left = 185
@@ -125,8 +133,8 @@ inherited ViewBomba: TViewBomba
           ParentBackground = False
           TabOrder = 0
           object Label1: TLabel
-            Left = 5
-            Top = 13
+            Left = 25
+            Top = 29
             Width = 143
             Height = 25
             Caption = 'Cadastrar Bomba'
@@ -138,16 +146,17 @@ inherited ViewBomba: TViewBomba
             ParentFont = False
           end
         end
-        object DBEdit1: TDBEdit
+        object edtCodBomba: TDBEdit
           Left = 25
           Top = 128
           Width = 154
           Height = 23
           DataField = 'ID_BOMBA'
           DataSource = dsDados
+          ReadOnly = True
           TabOrder = 1
         end
-        object DBEdit2: TDBEdit
+        object edtDescBomba: TDBEdit
           Left = 185
           Top = 128
           Width = 624
@@ -156,7 +165,7 @@ inherited ViewBomba: TViewBomba
           DataSource = dsDados
           TabOrder = 2
         end
-        object DBComboBox1: TDBComboBox
+        object cboxTanqueBomba: TDBComboBox
           Left = 185
           Top = 189
           Width = 145

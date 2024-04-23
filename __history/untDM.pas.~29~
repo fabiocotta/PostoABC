@@ -13,12 +13,18 @@ uses
 type
   TDM = class(TDataModule)
     conn: TFDConnection;
+    qryBombas: TFDQuery;
+    qryBombasID_BOMBA: TIntegerField;
+    qryBombasDESC_BOMBA: TWideStringField;
+    qryBombasID_TANQUE: TIntegerField;
   private
+
     { Private declarations }
 
   public
     { Public declarations }
-      function ListarBomba(sqlstring:string):string;
+
+
 
   end;
 
@@ -31,32 +37,6 @@ implementation
 
 {$R *.dfm}
 
-
-
-
-function TDM.ListarBomba(sqlstring:string):string;
-var
-qry : TFDQuery;
-
-begin
-
-  try
-
-    // instanciar o objeto
-    sqlstring := 'SELECT * FROM ABC_BOMBA';
-
-    qry := TFDQuery.Create(nil);
-    //manda ele conectar com o banco
-       qry.Connection := DM.conn;
-    qry.SQL.Add(sqlstring);
-    qry.Open;
-
-  finally
-    // limpa o objeto da memoria
-    qry.DisposeOf;
-
-  end;
-end;
 
 
 end.

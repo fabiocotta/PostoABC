@@ -38,7 +38,6 @@ object DM: TDM
     end
   end
   object qryTanques: TFDQuery
-    Active = True
     Connection = conn
     SQL.Strings = (
       'select * from abc_tanque')

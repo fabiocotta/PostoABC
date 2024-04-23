@@ -37,30 +37,4 @@ object DM: TDM
       Required = True
     end
   end
-  object qryTanques: TFDQuery
-    Active = True
-    Connection = conn
-    SQL.Strings = (
-      'select * from abc_tanque')
-    Left = 312
-    Top = 96
-    object qryTanquesID_TANQUE: TIntegerField
-      FieldName = 'ID_TANQUE'
-      Origin = 'ID_TANQUE'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qryTanquesDESC_TANQUE: TWideStringField
-      FieldName = 'DESC_TANQUE'
-      Origin = 'DESC_TANQUE'
-      Size = 50
-    end
-    object qryTanquesTIPO_TANQUE: TWideStringField
-      FieldName = 'TIPO_TANQUE'
-      Origin = 'TIPO_TANQUE'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
-  end
 end

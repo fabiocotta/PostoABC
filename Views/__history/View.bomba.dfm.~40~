@@ -1,72 +1,77 @@
 inherited ViewBomba: TViewBomba
   Caption = 'ViewBomba'
-  ClientWidth = 900
-  ExplicitLeft = -131
-  ExplicitWidth = 900
+  ClientWidth = 905
+  ExplicitWidth = 905
   TextHeight = 15
   inherited pnlTopo: TPanel
-    Width = 900
+    Width = 905
     ExplicitWidth = 900
     inherited pnlTitulo: TPanel
-      Width = 900
+      Width = 905
       ExplicitWidth = 900
       inherited lblTitulo: TLabel
         Width = 69
+        Height = 35
         Caption = 'Bomba'
         ExplicitWidth = 69
       end
       inherited pnlBtSair: TPanel
-        Left = 813
+        Left = 818
         ExplicitLeft = 813
       end
     end
   end
   inherited pnlFooter: TPanel
-    Width = 900
+    Width = 905
     ExplicitWidth = 900
     inherited btnEditar: TSpeedButton
-      Left = 531
+      Left = 536
       Caption = 'ALTERAR'
       OnClick = btnEditarClick
       ExplicitLeft = 531
     end
     inherited btnNovo: TSpeedButton
-      Left = 438
+      Left = 443
+      GroupIndex = 0
       OnClick = btnNovoClick
       ExplicitLeft = 438
     end
     inherited btnCancelar: TSpeedButton
-      Left = 810
+      Left = 815
+      GroupIndex = 0
+      OnClick = btnCancelarClick
       ExplicitLeft = 717
     end
     inherited btnSalvar: TSpeedButton
-      Left = 717
+      Left = 722
+      GroupIndex = 0
       OnClick = btnSalvarClick
       ExplicitLeft = 581
       ExplicitTop = 6
     end
     inherited btnExcluir: TSpeedButton
-      Left = 624
+      Left = 629
+      GroupIndex = 0
       ExplicitLeft = 618
       ExplicitTop = 6
     end
   end
   inherited pnlFundo: TPanel
-    Width = 900
+    Width = 905
     ExplicitWidth = 900
     inherited CardPanelLista: TCardPanel
-      Width = 898
+      Width = 903
       ActiveCard = CardCadastro
       ExplicitWidth = 898
       inherited CardPesquisa: TCard
-        Width = 898
+        Width = 903
         ExplicitWidth = 898
         inherited pnlTitPesquisa: TPanel
-          Width = 898
+          Width = 903
           ExplicitWidth = 898
         end
         inherited DBGrid1: TDBGrid
-          Width = 888
+          Width = 893
           Columns = <
             item
               Expanded = False
@@ -92,7 +97,7 @@ inherited ViewBomba: TViewBomba
         end
       end
       inherited CardCadastro: TCard
-        Width = 898
+        Width = 903
         ExplicitWidth = 898
         object Label2: TLabel
           Left = 25
@@ -100,15 +105,15 @@ inherited ViewBomba: TViewBomba
           Width = 63
           Height = 15
           Caption = 'C'#243'd Bomba'
-          FocusControl = DBEdit1
+          FocusControl = edtCodBomba
         end
         object Label3: TLabel
           Left = 185
           Top = 112
           Width = 108
           Height = 15
-          Caption = 'Descri'#231#224'o da Bomba'
-          FocusControl = DBEdit2
+          Caption = 'Descri'#231#227'o da Bomba'
+          FocusControl = edtDescBomba
         end
         object Label4: TLabel
           Left = 185
@@ -120,16 +125,17 @@ inherited ViewBomba: TViewBomba
         object Panel1: TPanel
           Left = 0
           Top = 0
-          Width = 898
+          Width = 903
           Height = 89
           Align = alTop
           BevelOuter = bvNone
           Color = 15395562
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 898
           object Label1: TLabel
-            Left = 5
-            Top = 13
+            Left = 25
+            Top = 29
             Width = 143
             Height = 25
             Caption = 'Cadastrar Bomba'
@@ -141,16 +147,17 @@ inherited ViewBomba: TViewBomba
             ParentFont = False
           end
         end
-        object DBEdit1: TDBEdit
+        object edtCodBomba: TDBEdit
           Left = 25
           Top = 128
           Width = 154
           Height = 23
           DataField = 'ID_BOMBA'
           DataSource = dsDados
+          ReadOnly = True
           TabOrder = 1
         end
-        object DBEdit2: TDBEdit
+        object edtDescBomba: TDBEdit
           Left = 185
           Top = 128
           Width = 624
@@ -159,13 +166,14 @@ inherited ViewBomba: TViewBomba
           DataSource = dsDados
           TabOrder = 2
         end
-        object DBComboBox1: TDBComboBox
+        object cboxTanqueBomba: TDBLookupComboBox
           Left = 185
           Top = 189
           Width = 145
           Height = 23
-          DataField = 'ID_TANQUE'
-          DataSource = dsDados
+          KeyField = 'ID_TANQUE'
+          ListField = 'DESC_TANQUE'
+          ListSource = dsTanques
           TabOrder = 3
         end
       end
@@ -174,6 +182,11 @@ inherited ViewBomba: TViewBomba
   inherited dsDados: TDataSource
     DataSet = DM.qryBombas
     Left = 801
+    Top = 65
+  end
+  object dsTanques: TDataSource
+    DataSet = DM.qryTanques
+    Left = 849
     Top = 65
   end
 end

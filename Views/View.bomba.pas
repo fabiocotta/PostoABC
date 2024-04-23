@@ -13,11 +13,12 @@ type
     Panel1: TPanel;
     Label1: TLabel;
     Label2: TLabel;
-    DBEdit1: TDBEdit;
+    edtCodBomba: TDBEdit;
     Label3: TLabel;
-    DBEdit2: TDBEdit;
+    edtDescBomba: TDBEdit;
     Label4: TLabel;
-    DBComboBox1: TDBComboBox;
+    cboxTanqueBomba: TDBLookupComboBox;
+    dsTanques: TDataSource;
     procedure FormShow(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
@@ -60,6 +61,7 @@ procedure TViewBomba.btnEditarClick(Sender: TObject);
 begin
   inherited;
   CardPanelLista.ActiveCard := cardCadastro;
+  edtDescBomba.SetFocus;
   btnNovo.Enabled := false;
   btnExcluir.Enabled := false;
   btnEditar.Enabled := false;
@@ -82,7 +84,7 @@ end;
 procedure TViewBomba.btnSalvarClick(Sender: TObject);
 begin
   inherited;
-   dm.QryBombas.edit;
+
    if dm.qryBombas.State in dsEditmodes then
     begin
       dm.QryBombas.post;

@@ -5,48 +5,70 @@ inherited ViewBomba: TViewBomba
   TextHeight = 15
   inherited pnlTopo: TPanel
     Width = 900
+    ExplicitWidth = 900
     inherited pnlTitulo: TPanel
       Width = 900
+      ExplicitWidth = 900
       inherited lblTitulo: TLabel
         Width = 69
+        Height = 35
         Caption = 'Bomba'
         ExplicitWidth = 69
       end
       inherited pnlBtSair: TPanel
         Left = 813
+        ExplicitLeft = 813
       end
     end
   end
   inherited pnlFooter: TPanel
     Width = 900
+    ExplicitWidth = 900
     inherited btnEditar: TSpeedButton
       Left = 531
+      Caption = 'ALTERAR'
       OnClick = btnEditarClick
+      ExplicitLeft = 531
     end
     inherited btnNovo: TSpeedButton
       Left = 438
+      GroupIndex = 0
       OnClick = btnNovoClick
+      ExplicitLeft = 438
     end
     inherited btnCancelar: TSpeedButton
-      Left = 624
+      Left = 810
+      GroupIndex = 0
+      OnClick = btnCancelarClick
+      ExplicitLeft = 717
     end
     inherited btnSalvar: TSpeedButton
       Left = 717
+      GroupIndex = 0
       OnClick = btnSalvarClick
+      ExplicitLeft = 581
+      ExplicitTop = 6
     end
     inherited btnExcluir: TSpeedButton
-      Left = 810
+      Left = 624
+      GroupIndex = 0
+      ExplicitLeft = 618
+      ExplicitTop = 6
     end
   end
   inherited pnlFundo: TPanel
     Width = 900
+    ExplicitWidth = 900
     inherited CardPanelLista: TCardPanel
       Width = 898
       ActiveCard = CardCadastro
+      ExplicitWidth = 898
       inherited CardPesquisa: TCard
         Width = 898
+        ExplicitWidth = 898
         inherited pnlTitPesquisa: TPanel
           Width = 898
+          ExplicitWidth = 898
         end
         inherited DBGrid1: TDBGrid
           Width = 888
@@ -76,6 +98,7 @@ inherited ViewBomba: TViewBomba
       end
       inherited CardCadastro: TCard
         Width = 898
+        ExplicitWidth = 898
         object Label2: TLabel
           Left = 25
           Top = 112
@@ -89,7 +112,7 @@ inherited ViewBomba: TViewBomba
           Top = 112
           Width = 108
           Height = 15
-          Caption = 'Descri'#231#224'o da Bomba'
+          Caption = 'Descri'#231#227'o da Bomba'
           FocusControl = DBEdit2
         end
         object Label4: TLabel
@@ -109,11 +132,9 @@ inherited ViewBomba: TViewBomba
           Color = 15395562
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 8
-          ExplicitWidth = 848
           object Label1: TLabel
-            Left = 5
-            Top = 13
+            Left = 25
+            Top = 29
             Width = 143
             Height = 25
             Caption = 'Cadastrar Bomba'
@@ -132,6 +153,7 @@ inherited ViewBomba: TViewBomba
           Height = 23
           DataField = 'ID_BOMBA'
           DataSource = dsDados
+          ReadOnly = True
           TabOrder = 1
         end
         object DBEdit2: TDBEdit

@@ -1,6 +1,7 @@
 inherited ViewBomba: TViewBomba
   Caption = 'ViewBomba'
   ClientWidth = 900
+  ExplicitLeft = -114
   ExplicitWidth = 900
   TextHeight = 15
   inherited pnlTopo: TPanel
@@ -11,7 +12,6 @@ inherited ViewBomba: TViewBomba
       ExplicitWidth = 900
       inherited lblTitulo: TLabel
         Width = 69
-        Height = 35
         Caption = 'Bomba'
         ExplicitWidth = 69
       end
@@ -26,26 +26,36 @@ inherited ViewBomba: TViewBomba
     ExplicitWidth = 900
     inherited btnEditar: TSpeedButton
       Left = 531
+      Down = False
+      Caption = 'ALTERAR'
       OnClick = btnEditarClick
       ExplicitLeft = 531
     end
     inherited btnNovo: TSpeedButton
       Left = 438
+      GroupIndex = 0
+      Down = True
       OnClick = btnNovoClick
       ExplicitLeft = 438
     end
     inherited btnCancelar: TSpeedButton
-      Left = 624
-      ExplicitLeft = 624
+      Left = 810
+      GroupIndex = 0
+      OnClick = btnCancelarClick
+      ExplicitLeft = 717
     end
     inherited btnSalvar: TSpeedButton
       Left = 717
+      GroupIndex = 0
       OnClick = btnSalvarClick
-      ExplicitLeft = 717
+      ExplicitLeft = 581
+      ExplicitTop = 6
     end
     inherited btnExcluir: TSpeedButton
-      Left = 810
-      ExplicitLeft = 810
+      Left = 624
+      GroupIndex = 0
+      ExplicitLeft = 618
+      ExplicitTop = 6
     end
   end
   inherited pnlFundo: TPanel
