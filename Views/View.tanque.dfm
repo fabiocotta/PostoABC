@@ -11,10 +11,76 @@ inherited ViewTanque: TViewTanque
       end
     end
   end
+  inherited pnlFooter: TPanel
+    inherited btnEditar: TSpeedButton
+      OnClick = btnEditarClick
+    end
+    inherited btnNovo: TSpeedButton
+      OnClick = btnNovoClick
+    end
+    inherited btnCancelar: TSpeedButton
+      OnClick = btnCancelarClick
+    end
+    inherited btnSalvar: TSpeedButton
+      OnClick = btnSalvarClick
+    end
+    inherited btnExcluir: TSpeedButton
+      OnClick = btnExcluirClick
+    end
+  end
   inherited pnlFundo: TPanel
     inherited CardPanelLista: TCardPanel
-      ActiveCard = CardCadastro
+      inherited CardPesquisa: TCard
+        inherited DBGrid1: TDBGrid
+          OnDblClick = btnEditarClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'ID_TANQUE'
+              Title.Caption = 'C'#243'digo'
+              Width = 75
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DESC_TANQUE'
+              Title.Caption = 'Descri'#231#227'o'
+              Width = 630
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'TIPO_TANQUE'
+              Title.Caption = 'Tipo Tanque'
+              Visible = True
+            end>
+        end
+      end
       inherited CardCadastro: TCard
+        object Label2: TLabel
+          Left = 25
+          Top = 112
+          Width = 66
+          Height = 15
+          Caption = 'C'#243'd. Tanque'
+          FocusControl = DBEdit1
+        end
+        object Label3: TLabel
+          Left = 111
+          Top = 112
+          Width = 92
+          Height = 15
+          Caption = 'Descri'#231#227'o Tanque'
+          FocusControl = edtdescTanque
+        end
+        object Label4: TLabel
+          Left = 111
+          Top = 168
+          Width = 64
+          Height = 15
+          Caption = 'Tipo Tanque'
+          FocusControl = DBEdit3
+        end
         object Panel1: TPanel
           Left = 0
           Top = 0
@@ -25,7 +91,6 @@ inherited ViewTanque: TViewTanque
           Color = 15395562
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 8
           object Label1: TLabel
             Left = 25
             Top = 29
@@ -40,7 +105,42 @@ inherited ViewTanque: TViewTanque
             ParentFont = False
           end
         end
+        object DBEdit1: TDBEdit
+          Left = 25
+          Top = 133
+          Width = 80
+          Height = 23
+          DataField = 'ID_TANQUE'
+          DataSource = dsDados
+          ReadOnly = True
+          TabOrder = 1
+        end
+        object edtdescTanque: TDBEdit
+          Left = 111
+          Top = 133
+          Width = 649
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'DESC_TANQUE'
+          DataSource = dsDados
+          TabOrder = 2
+        end
+        object DBEdit3: TDBEdit
+          Left = 111
+          Top = 184
+          Width = 82
+          Height = 23
+          CharCase = ecUpperCase
+          DataField = 'TIPO_TANQUE'
+          DataSource = dsDados
+          TabOrder = 3
+        end
       end
     end
+  end
+  inherited dsDados: TDataSource
+    DataSet = DM.qryTanques
+    Left = 761
+    Top = 217
   end
 end

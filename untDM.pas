@@ -21,6 +21,7 @@ type
     qryTanquesID_TANQUE: TIntegerField;
     qryTanquesDESC_TANQUE: TWideStringField;
     qryTanquesTIPO_TANQUE: TWideStringField;
+    qryBombasTIPO_TANQUE: TWideStringField;
   private
 
     { Private declarations }

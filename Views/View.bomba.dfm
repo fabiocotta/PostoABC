@@ -5,10 +5,10 @@ inherited ViewBomba: TViewBomba
   TextHeight = 15
   inherited pnlTopo: TPanel
     Width = 905
-    ExplicitWidth = 900
+    ExplicitWidth = 905
     inherited pnlTitulo: TPanel
       Width = 905
-      ExplicitWidth = 900
+      ExplicitWidth = 905
       inherited lblTitulo: TLabel
         Width = 69
         Height = 35
@@ -17,13 +17,13 @@ inherited ViewBomba: TViewBomba
       end
       inherited pnlBtSair: TPanel
         Left = 818
-        ExplicitLeft = 813
+        ExplicitLeft = 818
       end
     end
   end
   inherited pnlFooter: TPanel
     Width = 905
-    ExplicitWidth = 900
+    ExplicitWidth = 905
     inherited btnEditar: TSpeedButton
       Left = 536
       Caption = 'ALTERAR'
@@ -59,17 +59,16 @@ inherited ViewBomba: TViewBomba
   end
   inherited pnlFundo: TPanel
     Width = 905
-    ExplicitWidth = 900
+    ExplicitWidth = 905
     inherited CardPanelLista: TCardPanel
       Width = 903
-      ActiveCard = CardCadastro
-      ExplicitWidth = 898
+      ExplicitWidth = 903
       inherited CardPesquisa: TCard
         Width = 903
-        ExplicitWidth = 898
+        ExplicitWidth = 903
         inherited pnlTitPesquisa: TPanel
           Width = 903
-          ExplicitWidth = 898
+          ExplicitWidth = 903
         end
         inherited DBGrid1: TDBGrid
           Width = 893
@@ -86,7 +85,7 @@ inherited ViewBomba: TViewBomba
               Expanded = False
               FieldName = 'DESC_BOMBA'
               Title.Caption = 'Descri'#231#227'o'
-              Width = 619
+              Width = 650
               Visible = True
             end
             item
@@ -95,12 +94,18 @@ inherited ViewBomba: TViewBomba
               Title.Caption = 'C'#243'd. Tanque'
               Width = 78
               Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'TIPO_TANQUE'
+              Title.Caption = 'Tipo'
+              Visible = True
             end>
         end
       end
       inherited CardCadastro: TCard
         Width = 903
-        ExplicitWidth = 898
+        ExplicitWidth = 903
         object Label2: TLabel
           Left = 25
           Top = 112
@@ -134,7 +139,6 @@ inherited ViewBomba: TViewBomba
           Color = 15395562
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 898
           object Label1: TLabel
             Left = 25
             Top = 29

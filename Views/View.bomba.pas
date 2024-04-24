@@ -110,6 +110,7 @@ begin
    btnSalvar.Enabled := false;
    btnCancelar.Enabled := false;
    btnNovo.Enabled := true;
+   btnEditar.Enabled := true;
 end;
 
 procedure TViewBomba.FormShow(Sender: TObject);
@@ -127,8 +128,9 @@ procedure TViewBomba.Get_Bombas();
 begin
   dm.qryBombas.close;
   dm.qryBombas.sql.clear;
-  dm.qryBombas.sql.add('SELECT * FROM ABC_BOMBA');
-  dm.qryBombas.sql.add('ORDER BY ID_BOMBA DESC');
+  dm.qryBombas.sql.add('SELECT B.ID_BOMBA, B.DESC_BOMBA, B.ID_TANQUE, T.TIPO_TANQUE FROM ABC_BOMBA B');
+  dm.qryBombas.sql.add('INNER JOIN ABC_TANQUE T ON T.ID_TANQUE = B.ID_TANQUE');
+  dm.qryBombas.sql.add('ORDER BY B.ID_BOMBA DESC');
   dm.qryBombas.Open;
 end;
 
