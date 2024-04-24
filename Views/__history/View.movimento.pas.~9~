@@ -1,0 +1,68 @@
+unit View.movimento;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untCadBomba, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.WinXPanels, Vcl.Buttons,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.DBCtrls;
+
+type
+  TViewMovimento = class(TFrmCadBaseBomba)
+    Panel1: TPanel;
+    Label1: TLabel;
+    cboxBomba: TDBLookupComboBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    dsBombas: TDataSource;
+    RadioGroup1: TRadioGroup;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label4: TLabel;
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewMovimento: TViewMovimento;
+
+implementation
+
+{$R *.dfm}
+
+uses untDM;
+
+procedure TViewMovimento.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+   if Dm.QryMovimentos.State in dsEditModes then
+  begin
+    Dm.QryMovimentos.Cancel;
+    CardPanelLista.ActiveCard := cardPesquisa;
+    btnNovo.Enabled := true;
+    btnExcluir.Enabled := true;
+    btnEditar.Enabled := true;
+    btnSalvar.Enabled := false;
+    btnCancelar.Enabled := false;
+  end;
+end;
+
+procedure TViewMovimento.btnNovoClick(Sender: TObject);
+begin
+  inherited;
+   CardPanelLista.ActiveCard := cardCadastro;
+   cboxBomba.SetFocus;
+   dm.Qrymovimentos.Insert;
+   btnNovo.Enabled := false;
+   btnExcluir.Enabled := false;
+   btnEditar.Enabled := false;
+   btnSalvar.Enabled := true;
+   btnCancelar.Enabled := true;
+end;
+
+end.

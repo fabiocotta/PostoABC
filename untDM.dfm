@@ -1,5 +1,5 @@
 object DM: TDM
-  Height = 309
+  Height = 365
   Width = 393
   object conn: TFDConnection
     Params.Strings = (
@@ -16,6 +16,7 @@ object DM: TDM
     Top = 34
   end
   object qryBombas: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       
@@ -54,6 +55,7 @@ object DM: TDM
     end
   end
   object qryTanques: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'select * from abc_tanque')
@@ -123,6 +125,51 @@ object DM: TDM
     object qryPerfilVendasVL_IMPOSTO: TFMTBCDField
       FieldName = 'VL_IMPOSTO'
       Origin = 'VL_IMPOSTO'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+  end
+  object qryMovimentos: TFDQuery
+    Active = True
+    Connection = conn
+    SQL.Strings = (
+      'select * from abc_movimento')
+    Left = 312
+    Top = 248
+    object qryMovimentosID_MOVIMENTO: TIntegerField
+      FieldName = 'ID_MOVIMENTO'
+      Origin = 'ID_MOVIMENTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryMovimentosDATA: TDateField
+      FieldName = 'DATA'
+      Origin = '"DATA"'
+      Required = True
+    end
+    object qryMovimentosID_BOMBA: TIntegerField
+      FieldName = 'ID_BOMBA'
+      Origin = 'ID_BOMBA'
+      Required = True
+    end
+    object qryMovimentosLITROS: TFMTBCDField
+      FieldName = 'LITROS'
+      Origin = 'LITROS'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object qryMovimentosVALOR: TFMTBCDField
+      FieldName = 'VALOR'
+      Origin = 'VALOR'
+      Required = True
+      Precision = 18
+      Size = 2
+    end
+    object qryMovimentosIMPOSTO: TFMTBCDField
+      FieldName = 'IMPOSTO'
+      Origin = 'IMPOSTO'
       Required = True
       Precision = 18
       Size = 2

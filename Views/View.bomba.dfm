@@ -190,7 +190,7 @@ inherited ViewBomba: TViewBomba
   end
   inherited dsDados: TDataSource
     DataSet = DM.qryBombas
-    Left = 801
+    Left = 769
     Top = 65
   end
   object dsTanques: TDataSource

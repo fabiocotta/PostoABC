@@ -29,6 +29,13 @@ type
     qryTanquesID_TANQUE: TIntegerField;
     qryTanquesDESC_TANQUE: TStringField;
     qryTanquesTIPO_TANQUE: TStringField;
+    qryMovimentos: TFDQuery;
+    qryMovimentosID_MOVIMENTO: TIntegerField;
+    qryMovimentosDATA: TDateField;
+    qryMovimentosID_BOMBA: TIntegerField;
+    qryMovimentosLITROS: TFMTBCDField;
+    qryMovimentosVALOR: TFMTBCDField;
+    qryMovimentosIMPOSTO: TFMTBCDField;
   private
 
     { Private declarations }
