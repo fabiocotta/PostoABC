@@ -1,0 +1,4 @@
+inherited ViewMovimento: TViewMovimento
+  Caption = 'ViewMovimento'
+  TextHeight = 15
+end

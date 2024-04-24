@@ -10,6 +10,8 @@ uses
 
 type
   TViewTanque = class(TFrmCadBaseBomba)
+    Panel1: TPanel;
+    Label1: TLabel;
   private
     { Private declarations }
   public

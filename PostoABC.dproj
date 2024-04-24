@@ -139,6 +139,18 @@
             <Form>ViewTanque</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Views\View.perfil.pas">
+            <Form>ViewPerfilVenda</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Views\View.movimento.pas">
+            <Form>ViewMovimento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Views\View.relatorio.pas">
+            <Form>ViewRelatorio</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

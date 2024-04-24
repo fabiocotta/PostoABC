@@ -61,10 +61,14 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Image1: TImage;
+    SpeedButton1: TSpeedButton;
     procedure btnSairClick(Sender: TObject);
     procedure btnBombaClick(Sender: TObject);
     procedure btnTanqueClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btnPerfilVendaClick(Sender: TObject);
+    procedure btnMovimentoClick(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     { Private declarations }
     procedure GET_LineMenu(Sender: TObject);
@@ -79,8 +83,8 @@ implementation
 
 {$R *.dfm}
 
-uses UntCadBomba, View.tanque, View.bomba,
-  untDM;
+uses UntCadBomba, View.tanque, View.bomba , View.perfil,
+  untDM, View.movimento, View.relatorio;
 
 procedure TFrmPrincipal.btnTanqueClick(Sender: TObject);
 begin
@@ -106,6 +110,30 @@ begin
     end;
 end;
 
+procedure TFrmPrincipal.btnMovimentoClick(Sender: TObject);
+begin
+GET_LineMenu(Sender);
+    ViewRelatorio := TViewRelatorio.Create(Self);
+    try
+      ViewRelatorio.ShowModal;
+
+    finally
+      FreeAndNil(ViewRelatorio);
+    end;
+end;
+
+procedure TFrmPrincipal.btnPerfilVendaClick(Sender: TObject);
+begin
+   GET_LineMenu(Sender);
+    ViewPerfilVenda := TViewPerfilVenda.Create(Self);
+    try
+      ViewPerfilVenda.ShowModal;
+
+    finally
+      FreeAndNil(ViewPerfilVenda);
+    end;
+end;
+
 procedure TFrmPrincipal.btnSairClick(Sender: TObject);
 begin
   application.Terminate;
@@ -124,6 +152,18 @@ begin
   ShapeMenu.Top    := TSpeedButton(Sender).Top;
   pnlShapeMenu.Repaint;
 
+end;
+
+procedure TFrmPrincipal.SpeedButton1Click(Sender: TObject);
+begin
+    GET_LineMenu(Sender);
+    ViewMovimento := TViewMovimento.Create(Self);
+    try
+      ViewMovimento.ShowModal;
+
+    finally
+      FreeAndNil(ViewMovimento);
+    end;
 end;
 
 end.

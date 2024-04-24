@@ -21,7 +21,10 @@ uses
   TanqueBO in 'BO\TanqueBO.pas',
   untUtil in 'untUtil.pas',
   View.bomba in 'Views\View.bomba.pas' {ViewBomba},
-  View.tanque in 'Views\View.tanque.pas' {ViewTanque};
+  View.tanque in 'Views\View.tanque.pas' {ViewTanque},
+  View.perfil in 'Views\View.perfil.pas' {ViewPerfilVenda},
+  View.movimento in 'Views\View.movimento.pas' {ViewMovimento},
+  View.relatorio in 'Views\View.relatorio.pas' {ViewRelatorio};
 
 {$R *.res}
 
@@ -31,5 +34,8 @@ begin
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TViewTanque, ViewTanque);
+  Application.CreateForm(TViewPerfilVenda, ViewPerfilVenda);
+  Application.CreateForm(TViewMovimento, ViewMovimento);
+  Application.CreateForm(TViewRelatorio, ViewRelatorio);
   Application.Run;
 end.
