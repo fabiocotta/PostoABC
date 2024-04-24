@@ -14,14 +14,21 @@ type
   TDM = class(TDataModule)
     conn: TFDConnection;
     qryBombas: TFDQuery;
-    qryBombasID_BOMBA: TIntegerField;
-    qryBombasDESC_BOMBA: TWideStringField;
-    qryBombasID_TANQUE: TIntegerField;
     qryTanques: TFDQuery;
+    qryPerfilVendas: TFDQuery;
+    qryPerfilVendasID_PERFILVENDA: TIntegerField;
+    qryPerfilVendasDESC_PERFIL: TStringField;
+    qryPerfilVendasVL_ALCOOL: TFMTBCDField;
+    qryPerfilVendasVL_LITROGASOLINA: TFMTBCDField;
+    qryPerfilVendasVL_LITRODIESEL: TFMTBCDField;
+    qryPerfilVendasVL_IMPOSTO: TFMTBCDField;
+    qryBombasID_BOMBA: TIntegerField;
+    qryBombasDESC_BOMBA: TStringField;
+    qryBombasID_TANQUE: TIntegerField;
+    qryBombasTIPO_TANQUE: TStringField;
     qryTanquesID_TANQUE: TIntegerField;
-    qryTanquesDESC_TANQUE: TWideStringField;
-    qryTanquesTIPO_TANQUE: TWideStringField;
-    qryBombasTIPO_TANQUE: TWideStringField;
+    qryTanquesDESC_TANQUE: TStringField;
+    qryTanquesTIPO_TANQUE: TStringField;
   private
 
     { Private declarations }

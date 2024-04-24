@@ -83,6 +83,9 @@ begin
    btnSalvar.Enabled := false;
    btnCancelar.Enabled := false;
    btnNovo.Enabled := true;
+   btnExcluir.Enabled := true;
+   btnEditar.Enabled := true;
+
 end;
 
 procedure TViewBomba.btnNovoClick(Sender: TObject);
@@ -111,6 +114,7 @@ begin
    btnCancelar.Enabled := false;
    btnNovo.Enabled := true;
    btnEditar.Enabled := true;
+   btnExcluir.Enabled := true;
 end;
 
 procedure TViewBomba.FormShow(Sender: TObject);
