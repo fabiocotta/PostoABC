@@ -15,6 +15,9 @@ inherited ViewMovimento: TViewMovimento
     inherited btnNovo: TSpeedButton
       OnClick = btnNovoClick
     end
+    inherited btnCancelar: TSpeedButton
+      OnClick = btnCancelarClick
+    end
   end
   inherited pnlFundo: TPanel
     inherited CardPanelLista: TCardPanel
@@ -62,10 +65,10 @@ inherited ViewMovimento: TViewMovimento
           Height = 15
           Caption = 'Selecionar Bomba'
         end
-        object Label3: TLabel
+        object lblTipo: TLabel
           Left = 391
           Top = 127
-          Width = 106
+          Width = 52
           Height = 32
           Caption = 'TIPO'
           Font.Charset = ANSI_CHARSET
@@ -98,7 +101,6 @@ inherited ViewMovimento: TViewMovimento
           Color = 15395562
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 8
           object Label1: TLabel
             Left = 25
             Top = 29
@@ -124,33 +126,35 @@ inherited ViewMovimento: TViewMovimento
           ListField = 'DESC_BOMBA'
           ListSource = dsBombas
           TabOrder = 1
+          OnClick = cboxBombaClick
         end
-        object RadioGroup1: TRadioGroup
+        object rgForma: TRadioGroup
           Left = 25
           Top = 184
           Width = 232
           Height = 105
           Caption = 'Forma: '
+          ItemIndex = 0
           Items.Strings = (
             'Dinheiro'
             'Litro')
           TabOrder = 2
+          OnClick = rgFormaClick
         end
-        object Edit1: TEdit
+        object edtDinheiro: TEdit
           Left = 120
           Top = 208
           Width = 121
           Height = 23
           TabOrder = 3
-          Text = 'Edit1'
         end
-        object Edit2: TEdit
+        object edtLitro: TEdit
           Left = 120
           Top = 256
           Width = 121
           Height = 23
           TabOrder = 4
-          Text = 'Edit1'
+          Visible = False
         end
       end
     end

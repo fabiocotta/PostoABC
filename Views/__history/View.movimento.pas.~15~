@@ -14,14 +14,17 @@ type
     Label1: TLabel;
     cboxBomba: TDBLookupComboBox;
     Label2: TLabel;
-    Label3: TLabel;
+    lblTipo: TLabel;
     dsBombas: TDataSource;
-    RadioGroup1: TRadioGroup;
-    Edit1: TEdit;
-    Edit2: TEdit;
+    rgForma: TRadioGroup;
+    edtDinheiro: TEdit;
+    edtLitro: TEdit;
     Label4: TLabel;
     procedure btnNovoClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure rgFormaClick(Sender: TObject);
+    procedure cboxBombaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +66,37 @@ begin
    btnEditar.Enabled := false;
    btnSalvar.Enabled := true;
    btnCancelar.Enabled := true;
+end;
+
+procedure TViewMovimento.cboxBombaClick(Sender: TObject);
+begin
+  inherited;
+  lblTipo.Caption := dm.qryTanquesTIPO_TANQUE.AsString;
+end;
+
+procedure TViewMovimento.FormShow(Sender: TObject);
+begin
+  inherited;
+   //Get_Movimentos();
+   btnNovo.Enabled := true;
+   btnExcluir.Enabled := true;
+   btnEditar.Enabled := true;
+   btnSalvar.Enabled := false;
+   btnCancelar.Enabled := false;
+end;
+
+procedure TViewMovimento.rgFormaClick(Sender: TObject);
+begin
+  inherited;
+  if rgForma.ItemIndex = 1 then
+  begin
+    edtLitro.Visible := true;
+    edtDinheiro.Visible := false;
+  end else
+      begin
+        edtLitro.Visible := false;
+        edtDinheiro.Visible := true;
+      end;
 end;
 
 end.

@@ -11,9 +11,52 @@ inherited ViewMovimento: TViewMovimento
       end
     end
   end
+  inherited pnlFooter: TPanel
+    inherited btnNovo: TSpeedButton
+      OnClick = btnNovoClick
+    end
+    inherited btnCancelar: TSpeedButton
+      OnClick = btnCancelarClick
+    end
+  end
   inherited pnlFundo: TPanel
     inherited CardPanelLista: TCardPanel
       ActiveCard = CardCadastro
+      inherited CardPesquisa: TCard
+        inherited DBGrid1: TDBGrid
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'MOVIMENTO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DATA'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'BOMBA'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'LITROS'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'VALOR'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'IMPOSTO'
+              Visible = True
+            end>
+        end
+      end
       inherited CardCadastro: TCard
         object Label2: TLabel
           Left = 25
@@ -28,6 +71,19 @@ inherited ViewMovimento: TViewMovimento
           Width = 106
           Height = 32
           Caption = 'TIPO'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clRed
+          Font.Height = -24
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 25
+          Top = 351
+          Width = 150
+          Height = 32
+          Caption = 'Total a pagar:'
           Font.Charset = ANSI_CHARSET
           Font.Color = clRed
           Font.Height = -24
@@ -60,7 +116,7 @@ inherited ViewMovimento: TViewMovimento
             ParentFont = False
           end
         end
-        object cbboxBomba: TDBLookupComboBox
+        object cboxBomba: TDBLookupComboBox
           Left = 25
           Top = 136
           Width = 344
@@ -71,6 +127,34 @@ inherited ViewMovimento: TViewMovimento
           ListField = 'DESC_BOMBA'
           ListSource = dsBombas
           TabOrder = 1
+        end
+        object rgForma: TRadioGroup
+          Left = 25
+          Top = 184
+          Width = 232
+          Height = 105
+          Caption = 'Forma: '
+          ItemIndex = 0
+          Items.Strings = (
+            'Dinheiro'
+            'Litro')
+          TabOrder = 2
+          OnClick = rgFormaClick
+        end
+        object edtDinheiro: TEdit
+          Left = 120
+          Top = 208
+          Width = 121
+          Height = 23
+          TabOrder = 3
+        end
+        object edtLitro: TEdit
+          Left = 120
+          Top = 256
+          Width = 121
+          Height = 23
+          TabOrder = 4
+          Visible = False
         end
       end
     end

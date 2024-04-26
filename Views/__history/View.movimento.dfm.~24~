@@ -12,6 +12,9 @@ inherited ViewMovimento: TViewMovimento
     end
   end
   inherited pnlFooter: TPanel
+    inherited btnEditar: TSpeedButton
+      OnClick = btnEditarClick
+    end
     inherited btnNovo: TSpeedButton
       OnClick = btnNovoClick
     end
@@ -21,13 +24,13 @@ inherited ViewMovimento: TViewMovimento
   end
   inherited pnlFundo: TPanel
     inherited CardPanelLista: TCardPanel
-      ActiveCard = CardCadastro
       inherited CardPesquisa: TCard
         inherited DBGrid1: TDBGrid
           Columns = <
             item
               Expanded = False
               FieldName = 'MOVIMENTO'
+              Width = 84
               Visible = True
             end
             item
@@ -65,12 +68,11 @@ inherited ViewMovimento: TViewMovimento
           Height = 15
           Caption = 'Selecionar Bomba'
         end
-        object Label3: TLabel
+        object lblTipo: TLabel
           Left = 391
           Top = 127
-          Width = 106
+          Width = 7
           Height = 32
-          Caption = 'TIPO'
           Font.Charset = ANSI_CHARSET
           Font.Color = clRed
           Font.Height = -24
@@ -91,6 +93,33 @@ inherited ViewMovimento: TViewMovimento
           Font.Style = [fsBold]
           ParentFont = False
         end
+        object SpeedButton1: TSpeedButton
+          Left = 25
+          Top = 304
+          Width = 89
+          Height = 41
+          Caption = 'ABASTECER'
+        end
+        object Label3: TLabel
+          Left = 391
+          Top = 115
+          Width = 93
+          Height = 15
+          Caption = 'Tipo Combust'#237'vel'
+        end
+        object lblValorTotal: TLabel
+          Left = 193
+          Top = 351
+          Width = 214
+          Height = 32
+          Caption = 'lblValorPargamento'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clRed
+          Font.Height = -24
+          Font.Name = 'Segoe UI Semibold'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
         object Panel1: TPanel
           Left = 0
           Top = 0
@@ -101,7 +130,6 @@ inherited ViewMovimento: TViewMovimento
           Color = 15395562
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 8
           object Label1: TLabel
             Left = 25
             Top = 29
@@ -127,43 +155,47 @@ inherited ViewMovimento: TViewMovimento
           ListField = 'DESC_BOMBA'
           ListSource = dsBombas
           TabOrder = 1
+          OnClick = cboxBombaClick
         end
-        object RadioGroup1: TRadioGroup
+        object rgForma: TRadioGroup
           Left = 25
           Top = 184
           Width = 232
           Height = 105
           Caption = 'Forma: '
+          ItemIndex = 0
           Items.Strings = (
             'Dinheiro'
             'Litro')
           TabOrder = 2
+          OnClick = rgFormaClick
         end
-        object Edit1: TEdit
+        object edtDinheiro: TEdit
           Left = 120
           Top = 208
           Width = 121
           Height = 23
           TabOrder = 3
         end
-        object Edit2: TEdit
+        object edtLitro: TEdit
           Left = 120
           Top = 256
           Width = 121
           Height = 23
           TabOrder = 4
+          Visible = False
         end
       end
     end
   end
   inherited dsDados: TDataSource
     DataSet = DM.qryMovimentos
-    Left = 745
-    Top = 73
+    Left = 753
+    Top = 65
   end
   object dsBombas: TDataSource
     DataSet = DM.qryBombas
     Left = 681
-    Top = 81
+    Top = 65
   end
 end

@@ -14,21 +14,16 @@ type
     Label1: TLabel;
     cboxBomba: TDBLookupComboBox;
     Label2: TLabel;
-    lblTipo: TLabel;
+    Label3: TLabel;
     dsBombas: TDataSource;
     rgForma: TRadioGroup;
     edtDinheiro: TEdit;
     edtLitro: TEdit;
     Label4: TLabel;
-    SpeedButton1: TSpeedButton;
-    Label3: TLabel;
-    lblValorTotal: TLabel;
     procedure btnNovoClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure rgFormaClick(Sender: TObject);
-    procedure cboxBombaClick(Sender: TObject);
-    procedure btnEditarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -59,19 +54,6 @@ begin
   end;
 end;
 
-procedure TViewMovimento.btnEditarClick(Sender: TObject);
-begin
-  inherited;
-  CardPanelLista.ActiveCard := cardCadastro;
-  cboxBomba.SetFocus;
-  dm.qryMovimentos.Edit;
-  btnNovo.Enabled := false;
-  btnExcluir.Enabled := false;
-  btnEditar.Enabled := false;
-  btnSalvar.Enabled := true;
-  btnCancelar.Enabled := true;
-end;
-
 procedure TViewMovimento.btnNovoClick(Sender: TObject);
 begin
   inherited;
@@ -83,12 +65,6 @@ begin
    btnEditar.Enabled := false;
    btnSalvar.Enabled := true;
    btnCancelar.Enabled := true;
-end;
-
-procedure TViewMovimento.cboxBombaClick(Sender: TObject);
-begin
-  inherited;
-  lblTipo.Caption := dm.qryBombasTIPO_TANQUE.AsString;
 end;
 
 procedure TViewMovimento.FormShow(Sender: TObject);

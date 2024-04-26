@@ -12,29 +12,22 @@ inherited ViewMovimento: TViewMovimento
     end
   end
   inherited pnlFooter: TPanel
-    inherited btnEditar: TSpeedButton
-      Visible = False
-      OnClick = btnEditarClick
-    end
     inherited btnNovo: TSpeedButton
       OnClick = btnNovoClick
     end
     inherited btnCancelar: TSpeedButton
       OnClick = btnCancelarClick
     end
-    inherited btnExcluir: TSpeedButton
-      Visible = False
-    end
   end
   inherited pnlFundo: TPanel
     inherited CardPanelLista: TCardPanel
+      ActiveCard = CardCadastro
       inherited CardPesquisa: TCard
         inherited DBGrid1: TDBGrid
           Columns = <
             item
               Expanded = False
               FieldName = 'MOVIMENTO'
-              Width = 84
               Visible = True
             end
             item
@@ -114,9 +107,8 @@ inherited ViewMovimento: TViewMovimento
         object lblValorTotal: TLabel
           Left = 193
           Top = 351
-          Width = 214
+          Width = 7
           Height = 32
-          Caption = 'lblValorPargamento'
           Font.Charset = ANSI_CHARSET
           Font.Color = clRed
           Font.Height = -24
@@ -194,12 +186,12 @@ inherited ViewMovimento: TViewMovimento
   end
   inherited dsDados: TDataSource
     DataSet = DM.qryMovimentos
-    Left = 753
-    Top = 65
+    Left = 745
+    Top = 73
   end
   object dsBombas: TDataSource
     DataSet = DM.qryBombas
     Left = 681
-    Top = 65
+    Top = 81
   end
 end
