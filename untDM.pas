@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
   FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
-  FireDAC.Comp.DataSet;
+  FireDAC.Comp.DataSet, Datasnap.DBClient, Datasnap.Provider;
 
 type
   TDM = class(TDataModule)
@@ -36,7 +36,22 @@ type
     qryMovimentosLITROS: TFMTBCDField;
     qryMovimentosVALOR: TFMTBCDField;
     qryMovimentosIMPOSTO: TFMTBCDField;
+    QueryRelatAbastecimento: TFDQuery;
+    dspRelatAbastecimento: TDataSetProvider;
+    cdsRelatAbastecimento: TClientDataSet;
+    QueryRelatAbastecimentoTanque: TStringField;
+    QueryRelatAbastecimentoDESC_BOMBA: TStringField;
+    QueryRelatAbastecimentoData: TDateField;
+    QueryRelatAbastecimentoValor: TFMTBCDField;
+    QueryRelatAbastecimentoLitros: TFMTBCDField;
+    cdsRelatAbastecimentoTanque: TStringField;
+    cdsRelatAbastecimentoDESC_BOMBA: TStringField;
+    cdsRelatAbastecimentoData: TDateField;
+    cdsRelatAbastecimentoValor: TFMTBCDField;
+    cdsRelatAbastecimentoLitros: TFMTBCDField;
+    function relatorioAbastecimento(dataini, datafim: Tdatetime): integer;
   private
+
 
     { Private declarations }
 
@@ -55,6 +70,16 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+function TDM.relatorioAbastecimento(dataini, datafim: Tdatetime): integer;
+begin
+  cdsRelatAbastecimento.Close;
+  cdsRelatAbastecimento.Params.ParamByName('dataini').Value := dataini;
+  cdsRelatAbastecimento.Params.ParamByName('datafim').Value := datafim;
+  cdsRelatAbastecimento.open;
+  result := cdsRelatAbastecimento.RecordCount;
+
+end;
 
 
 

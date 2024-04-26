@@ -1,6 +1,6 @@
 object DM: TDM
-  Height = 365
-  Width = 393
+  Height = 336
+  Width = 569
   object conn: TFDConnection
     Params.Strings = (
       'User_Name=sysdba'
@@ -172,6 +172,121 @@ object DM: TDM
       Origin = 'IMPOSTO'
       Required = True
       Precision = 18
+      Size = 2
+    end
+  end
+  object QueryRelatAbastecimento: TFDQuery
+    Active = True
+    Connection = conn
+    SQL.Strings = (
+      
+        'select  t.desc_tanque "Tanque", b.desc_bomba, a.data "Data", sum' +
+        '(a.valor) "Valor", sum(a.litros)"Litros" from abc_movimento a'
+      'inner join abc_bomba b on b.id_bomba = a.id_bomba'
+      'inner join abc_tanque t on t.id_tanque = B.id_tanque'
+      'where a.data between :dataini and :datafim'
+      'group by 1,2,3'
+      'order by a.data')
+    Left = 441
+    Top = 24
+    ParamData = <
+      item
+        Position = 1
+        Name = 'DATAINI'
+        DataType = ftDate
+        ParamType = ptInput
+        Value = 45407d
+      end
+      item
+        Position = 2
+        Name = 'DATAFIM'
+        DataType = ftDate
+        ParamType = ptInput
+        Value = 45407d
+      end>
+    object QueryRelatAbastecimentoTanque: TStringField
+      FieldName = 'Tanque'
+      Origin = '"Tanque"'
+      Required = True
+      Size = 50
+    end
+    object QueryRelatAbastecimentoDESC_BOMBA: TStringField
+      FieldName = 'DESC_BOMBA'
+      Origin = 'DESC_BOMBA'
+      Required = True
+      Size = 50
+    end
+    object QueryRelatAbastecimentoData: TDateField
+      FieldName = 'Data'
+      Origin = '"Data"'
+      Required = True
+    end
+    object QueryRelatAbastecimentoValor: TFMTBCDField
+      FieldName = 'Valor'
+      Origin = '"Valor"'
+      currency = True
+      Precision = 38
+      Size = 2
+    end
+    object QueryRelatAbastecimentoLitros: TFMTBCDField
+      FieldName = 'Litros'
+      Origin = '"Litros"'
+      Precision = 38
+      Size = 2
+    end
+  end
+  object dspRelatAbastecimento: TDataSetProvider
+    DataSet = QueryRelatAbastecimento
+    Left = 441
+    Top = 72
+  end
+  object cdsRelatAbastecimento: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftDate
+        Name = 'DATAINI'
+        ParamType = ptInput
+        Value = 45407d
+      end
+      item
+        DataType = ftDate
+        Name = 'DATAFIM'
+        ParamType = ptInput
+        Value = 45407d
+      end>
+    ProviderName = 'dspRelatAbastecimento'
+    Left = 441
+    Top = 128
+    object cdsRelatAbastecimentoTanque: TStringField
+      FieldName = 'Tanque'
+      Origin = '"Tanque"'
+      Required = True
+      Size = 50
+    end
+    object cdsRelatAbastecimentoDESC_BOMBA: TStringField
+      FieldName = 'DESC_BOMBA'
+      Origin = 'DESC_BOMBA'
+      Required = True
+      Size = 50
+    end
+    object cdsRelatAbastecimentoData: TDateField
+      FieldName = 'Data'
+      Origin = '"Data"'
+      Required = True
+    end
+    object cdsRelatAbastecimentoValor: TFMTBCDField
+      FieldName = 'Valor'
+      Origin = '"Valor"'
+      currency = True
+      Precision = 38
+      Size = 2
+    end
+    object cdsRelatAbastecimentoLitros: TFMTBCDField
+      FieldName = 'Litros'
+      Origin = '"Litros"'
+      Precision = 38
       Size = 2
     end
   end

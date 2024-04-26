@@ -111,15 +111,27 @@ begin
 end;
 
 procedure TFrmPrincipal.btnMovimentoClick(Sender: TObject);
+  var
+   data1, data2:TDatetime;
 begin
-GET_LineMenu(Sender);
+  try
     ViewRelatorio := TViewRelatorio.Create(Self);
-    try
-      ViewRelatorio.ShowModal;
+    if ViewRelatorio.showmodal = mrok then
+      begin
+        data1 := strtodate(ViewRelatorio.editDataIni.text);
+        data2 := strtodate(ViewRelatorio.editDataFim.text);
+        if dm.relatorioAbastecimento(data1, data2) = 0 then
+          Application.MessageBox('Não há abastecimento registrado no período informado.','Aviso', + MB_ICONINFORMATION + mb_ok)
+        else
+          begin
+            ViewRelatorio.labPeriodo.Caption := ViewRelatorio.labPeriodo.Caption+ ' ' + datetostr(data1) +  ' a ' +  datetostr(data2);
+            ViewRelatorio.RLReport1.Preview;
+          end;
+      end;
+  finally
+    ViewRelatorio.free;
+  end;
 
-    finally
-      FreeAndNil(ViewRelatorio);
-    end;
 end;
 
 procedure TFrmPrincipal.btnPerfilVendaClick(Sender: TObject);
